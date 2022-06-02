@@ -1,0 +1,236 @@
+---
+layout: "layouts/base.njk"
+title: "IU News"
+description: "Learn about news from all of Indiana Universitys campuses."
+---
+{%- from "components/card.njk" import Card -%}
+{%- from "components/heading.njk" import Heading -%}
+{%- from "components/linkHub.njk" import LinkHub -%}
+{%- from "components/newsFeed.njk" import NewsFeed -%}
+{%- from "components/profile.njk" import Profile -%}
+
+<main id="main-content">
+  <div class="rvt-flow rvt-bg-black-000">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-row--loose">
+        <div class="rvt-cols-md">
+          <div class="rvt-hero rvt-c-hero">
+            <div class="rvt-hero__inner">
+              <div class="rvt-hero__body rvt-c-hero__body">
+                <span class="rvt-hero__eyebrow">Breaking news</span>
+                <h1 class="rvt-hero__title">A breaking news headline could go right here</h1>
+                <div class="rvt-hero__media rvt-m-top-md">
+                  <img src="https://v2.rivet.iu.edu/img/placeholder/hero-2.jpg" alt="Person at desk coding a website">
+                  <div class="rvt-hero__media-caption">An optional image caption</div>
+                </div>
+                <div class="rvt-hero__teaser">
+                  <p>Develop the skills you need for a rewarding career, and follow in the footsteps of more than 729,000 IU alumni who are leading organizations, innovating the future, and making an impact on their communities and the world.</p>
+                </div>
+                <div class="rvt-hero__actions">
+                  <a class="rvt-cta rvt-cta--button" href="#">Learn more about IU</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-cols-md">
+          {{ Heading({ 
+            border: true,
+            eyebrow: "All campuses",
+            title: "Latest IU news",
+            url: "#0",
+            cta: "All news stories"
+          }) }}
+          {{ NewsFeed({ news: [{
+              img: "./img/fill/musk.png",
+              alt: "More Elon Musk stanning.",
+              eyebrow: "Breaking news",
+              title: "A breaking news headline could also go right here",
+              meta: [{
+                campus: "Indiana University",
+                time: "April 1, 2022"
+              }]
+            },
+            {
+              img: "./img/fill/covid.png",
+              alt: "Employee at IU's Covid clinic preparing a dose of a COVID vaccine.",
+              eyebrow: "Health and wellness",
+              title: "COVID-19 misinformation linked to vaccine hesistancy, refusal",
+              meta: [{
+                campus: "IU Bloomington",
+                time: "22hr"
+              }]
+            },
+            {
+              img: "./img/fill/grads.png",
+              alt: "Excited IU grads at commencement.",
+              eyebrow: "Campus life",
+              title: "IU Northwest launches Groups Scholars Program",
+              meta: [{
+                campus: "IU Northwest",
+                time: "1d"
+              }]
+            }]
+          })
+        }}
+        {{ Card({
+          horizontal: true,
+          title: "IU experts available to comment on Elon Musk's purchase of Twitter",
+          CTALink: "#0",
+          CTA: "View latest tip sheet"
+        }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rvt-flow">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-border-bottom">
+        {{ Heading({ 
+          border: true,
+          eyebrow: "All campuses",
+          title: "IU in the news",
+          url: "#0",
+          cta: "All IU in the news stories"
+        }) }}
+        {{ NewsFeed({ external: true, news: [{
+            eyebrow: "The Conversation",
+            title: "Jackie Robinson was a Republican until the GOP became the...",
+            url: "#0"
+          },
+          {
+            eyebrow: "PBS",
+            title: "How Much Do Social Media Algorithms Control You?",
+            url: "#0"
+          },
+          {
+            eyebrow: "WISH-TV",
+            title: "Loophole in Indiana red flag law comes under fire",
+            url: "#0"
+          },
+          {
+            eyebrow: "FOX59",
+            title: "Where Indiana's red flag law stands one year after FedEx shooting",
+            url: "#0"
+          }]
+        })
+        }}
+      </div>
+      <div class="rvt-row rvt-row--loose">
+        <div class="rvt-cols-md">
+          {{ Heading({ 
+            eyebrow: "Media",
+            title: "For the media"
+          }) }}
+          <p class="rvt-c-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nibh aliquam nec consectetur platea fringilla magna.</p>
+          {{ LinkHub({ 
+            stacked: true,
+            links: [{
+              url: "#0",
+              title: "Media resources",
+              description: "Arrange an interview, request a photo, or find your way around campus."
+            },
+            {
+              url: "#0",
+              title: "Faculty experts",
+              description: "Find a faculty expert on any IU campus."
+            },
+            {
+              url: "#0",
+              title: "Media specialists",
+              description: "Search our staff directory by topic area."
+            }]
+          }) }}
+        </div>
+        <div class="rvt-cols-md rvt-p-top-xxl">
+          {{ Profile({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Faculty expert",
+            name: "David Bosco",
+            description: "David Bosco is associate professor of internatinal studies in the Hamilton Lugar School at IU Bloomington. He is an international law expert and is available to comment on the allegations that Russia has committed war crimes in Ukraine.",
+            url: "#0",
+            cta: "More about "
+          }) }}
+        </div>
+      </div>
+      <div class="rvt-flow">
+        <div class="rvt-container-xl">
+          <div class="rvt-row rvt-border-bottom">
+            {{ Heading({ 
+              border: true,
+              eyebrow: "All campuses",
+              title: "Topical resources and stories",
+              url: "#0",
+              cta: "All news stories"
+            }) }}
+          </div>
+          <div class="rvt-row rvt-row--loose rvt-p-top-xl">
+            <div class="rvt-cols-md">
+              {{ Card({
+                interactive: true,
+                img: "./img/fill/ukraine.png",
+                alt: "A globe centered on Ukraine",
+                eyebrow: "Ukraine experts",
+                title: "IU experts are ready to talk about Ukraine",
+                url: "#0",
+                description: "IU political scientists, historians and economists are available to discuss the impacts of the invasion on a wide range of topics, including foreign policy and politics, the economy, historical context, diplomacy and more."
+              }) }}
+            </div>
+            <div class="rvt-cols-md">
+              {{ NewsFeed({ news: [{
+                  img: "./img/fill/ambassador.png",
+                  alt: "Former US ambassador to Ukraine.",
+                  eyebrow: "Ukraine",
+                  title: "Former ambassador to Ukraine headlines IU's seventh America's Role in the World Conference",
+                  meta: [{
+                    campus: "Indiana University",
+                    time: "April 1, 2022"
+                  }]
+                },
+                {
+                  img: "./img/fill/evacuation.png",
+                  alt: "People lining up to leave Ukraine.",
+                  eyebrow: "Ukraine",
+                  title: "Headline about specific topic can snuggle in this little spot right here",
+                  meta: [{
+                    campus: "Indiana University",
+                    time: "April 1, 2022"
+                  }]
+                },
+                {
+                  img: "./img/fill/covid-iupui.png",
+                  alt: "Covid drive-thru testing at IUPUI.",
+                  eyebrow: "Covid-19",
+                  title: "Headline about specific topic can snuggle in this little spot right here",
+                  meta: [{
+                    campus: "Indiana University",
+                    time: "April 1, 2022"
+                  }]
+                },
+                {
+                  img: "./img/fill/globe.png",
+                  alt: "Student looking at the globe in Ballantine Hall.",
+                  eyebrow: "Climate change",
+                  title: "Headline about specific topic can snuggle in this little spot right here",
+                  meta: [{
+                    campus: "Indiana University",
+                    time: "April 1, 2022"
+                  }]
+                }]
+              }) }}
+            </div>
+          </div>
+          <div class="rvt-row rvt-p-top-xxl">
+            <div class="rvt-c-twitter">
+              <div class="rvt-c-twitter__content">
+                <span class="rvt-c-twitter__eyebrow">Retweet @IUNEWSROOM</span>
+                <p><a href="#0">IUPUI students "rallied for research" and raised nearly $365,000 this past weekend at Jagathon. See more scenes See more scenes from the event&#8230;</a></p>
+                <a href="#" class="rvt-cta rvt-cta--button">Follow News at IU on Twitter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

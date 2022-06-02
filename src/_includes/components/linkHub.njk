@@ -1,0 +1,14 @@
+{% macro LinkHub(params) %}
+  <ul class="rvt-link-hub {% if params.stacked %} rvt-link-hub--stacked{% endif %}">
+    {% for link in params.links %}
+    <li class="rvt-link-hub__item">
+      <a class="rvt-link-hub__link" href="{{ link.url }}">
+        <span class="rvt-link-hub__text">{{ link.title }}</span>
+        {%- if link.description -%}
+        <span class="rvt-link-hub__description">{{ link.description }}</span>
+        {%- endif -%}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

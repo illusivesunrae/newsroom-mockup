@@ -1,0 +1,36 @@
+{
+  "name": "newsroom-mockup",
+  "version": "1.0.0",
+  "description": "Mockups for Live Whale",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/illusivesunrae/newsroom-mockup"
+  },
+  "main": "dist/js/site.js",
+  "scripts": {
+    "build": "npm run-s clean && eleventy && sass:build",
+    "clean": "npx rimraf _site",
+    "copy:svg": "npx cpx './node_modules/rivet-icons/dist/*.svg' './src/img/'",
+    "eleventy": "npx eleventy",
+    "eleventy:serve": "npx eleventy --serve",
+    "sass": "npx stylelint --fix src/sass/**/*.scss && npx sass src/sass:_site/css",
+    "sass:build": "npx stylelint src/sass/**/*.scss && npx sass --style=compressed src/sass:_site/css",
+    "sass:watch": "npx stylelint src/sass/**/*.scss && npx sass --watch src/sass:_site/css",
+    "start": "npm run copy:svg && npm-run-all -p eleventy:serve sass:watch"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "cpx": "^1.5.0",
+    "html-minifier": "^4.0.0",
+    "moment": "^2.29.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "rivet-core": "^2.0.0-beta.4",
+    "rivet-icons": "^0.6.0",
+    "sass": "^1.35.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-rivet": "^1.0.0"
+  }
+}
