@@ -86,7 +86,7 @@ description: "Learn about news from all of Indiana Universitys campuses."
   <div class="rvt-flow">
     <div class="rvt-container-xl">
       <div class="rvt-row rvt-border-bottom">
-        <div class="rvt-cols-md">
+        <div class="rvt-cols-12">
           {{ Heading({ 
             border: true,
             eyebrow: "All campuses",
@@ -94,6 +94,7 @@ description: "Learn about news from all of Indiana Universitys campuses."
             url: "#0",
             cta: "All IU in the news stories"
           }) }}
+        </div>
           {{ NewsFeed({ external: true, news: [{
               eyebrow: "The Conversation",
               title: "Jackie Robinson was a Republican until the GOP became the...",
@@ -116,7 +117,6 @@ description: "Learn about news from all of Indiana Universitys campuses."
             }]
           })
           }}
-        </div>
       </div>
       <div class="rvt-row rvt-row--loose">
         <div class="rvt-cols-md">
@@ -155,223 +155,219 @@ description: "Learn about news from all of Indiana Universitys campuses."
           }) }}
         </div>
       </div>
-      <div class="rvt-flow">
-        <div class="rvt-container-xl">
-          <div class="rvt-row rvt-border-bottom">
-            <div class="rvt-cols">
-              {{ Heading({ 
-                border: true,
-                eyebrow: "All campuses",
-                title: "Topical resources and stories",
-                url: "#0",
-                cta: "All news stories"
-              }) }}
+      <div class="rvt-row rvt-border-bottom">
+        <div class="rvt-cols">
+          {{ Heading({ 
+            border: true,
+            eyebrow: "All campuses",
+            title: "Topical resources and stories",
+            url: "#0",
+            cta: "All news stories"
+          }) }}
+        </div>
+      </div>
+      <div class="rvt-row rvt-row--loose rvt-p-top-xl">
+        <div class="rvt-cols-lg">
+          {{ Card({
+            interactive: true,
+            img: "./img/fill/ukraine.png",
+            alt: "A globe centered on Ukraine",
+            eyebrow: "Ukraine experts",
+            title: "IU experts are ready to talk about Ukraine",
+            url: "#0",
+            description: "IU political scientists, historians and economists are available to discuss the impacts of the invasion on a wide range of topics, including foreign policy and politics, the economy, historical context, diplomacy and more."
+          }) }}
+        </div>
+        <div class="rvt-cols-lg">
+          {{ NewsFeed({ news: [{
+              img: "./img/fill/ambassador.png",
+              alt: "Former US ambassador to Ukraine.",
+              eyebrow: "Ukraine",
+              title: "Former ambassador to Ukraine headlines IU's seventh America's Role in the World Conference",
+              meta: [{
+                campus: "Indiana University",
+                time: "April 1, 2022"
+              }]
+            },
+            {
+              img: "./img/fill/evacuation.png",
+              alt: "People lining up to leave Ukraine.",
+              eyebrow: "Ukraine",
+              title: "Headline about specific topic can snuggle in this little spot right here",
+              meta: [{
+                campus: "Indiana University",
+                time: "April 1, 2022"
+              }]
+            },
+            {
+              img: "./img/fill/covid-iupui.png",
+              alt: "Covid drive-thru testing at IUPUI.",
+              eyebrow: "Covid-19",
+              title: "Headline about specific topic can snuggle in this little spot right here",
+              meta: [{
+                campus: "Indiana University",
+                time: "April 1, 2022"
+              }]
+            },
+            {
+              img: "./img/fill/globe.png",
+              alt: "Student looking at the globe in Ballantine Hall.",
+              eyebrow: "Climate change",
+              title: "Headline about specific topic can snuggle in this little spot right here",
+              meta: [{
+                campus: "Indiana University",
+                time: "April 1, 2022"
+              }]
+            }]
+          }) }}
+        </div>
+      </div>
+      <div class="rvt-row rvt-p-top-xxl">
+        <div class="rvt-c-twitter">
+          <div class="rvt-c-twitter__content">
+            <span class="rvt-c-twitter__eyebrow">Retweet @IUNEWSROOM</span>
+            <p><a href="#0">IUPUI students "rallied for research" and raised nearly $365,000 this past weekend at Jagathon. See more scenes See more scenes from the event&#8230;</a></p>
+            <a href="#" class="rvt-cta rvt-cta--button">Follow News at IU on Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="rvt-row rvt-m-top-3-xl rvt-m-bottom-xxl">
+        <div class="rvt-billboard rvt-billboard--reverse rvt-c-billboard">
+          <div class="rvt-billboard__image">
+            <img src="./img/fill/swimmer.png" alt="Student in vintage-style Indiana University t-shirt">
+          </div>
+          <div class="rvt-billboard__body">
+            <h2 class="rvt-billboard__title">Feature stories</h2>
+            <div class="rvt-billboard__content [ rvt-flow ]">
+              <p>Take a closer look inside life at IU. These in-depth features highlight the special stories, unique culture, and rich history of Indiana University.</p>
+              <a class="rvt-cta" href="#">Explore feature stories</a>
             </div>
           </div>
-          <div class="rvt-row rvt-row--loose rvt-p-top-xl">
-            <div class="rvt-cols-lg">
-              {{ Card({
-                interactive: true,
-                img: "./img/fill/ukraine.png",
-                alt: "A globe centered on Ukraine",
-                eyebrow: "Ukraine experts",
-                title: "IU experts are ready to talk about Ukraine",
-                url: "#0",
-                description: "IU political scientists, historians and economists are available to discuss the impacts of the invasion on a wide range of topics, including foreign policy and politics, the economy, historical context, diplomacy and more."
-              }) }}
+        </div>
+      </div>
+      <div class="rvt-row">
+        <div class="rvt-cols-12">
+          {{ Heading({ 
+            border: true,
+            eyebrow: "All campuses",
+            title: "IU stories by interest"
+          }) }}
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-arts">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/masks.svg" -%}
             </div>
-            <div class="rvt-cols-lg">
-              {{ NewsFeed({ news: [{
-                  img: "./img/fill/ambassador.png",
-                  alt: "Former US ambassador to Ukraine.",
-                  eyebrow: "Ukraine",
-                  title: "Former ambassador to Ukraine headlines IU's seventh America's Role in the World Conference",
-                  meta: [{
-                    campus: "Indiana University",
-                    time: "April 1, 2022"
-                  }]
-                },
-                {
-                  img: "./img/fill/evacuation.png",
-                  alt: "People lining up to leave Ukraine.",
-                  eyebrow: "Ukraine",
-                  title: "Headline about specific topic can snuggle in this little spot right here",
-                  meta: [{
-                    campus: "Indiana University",
-                    time: "April 1, 2022"
-                  }]
-                },
-                {
-                  img: "./img/fill/covid-iupui.png",
-                  alt: "Covid drive-thru testing at IUPUI.",
-                  eyebrow: "Covid-19",
-                  title: "Headline about specific topic can snuggle in this little spot right here",
-                  meta: [{
-                    campus: "Indiana University",
-                    time: "April 1, 2022"
-                  }]
-                },
-                {
-                  img: "./img/fill/globe.png",
-                  alt: "Student looking at the globe in Ballantine Hall.",
-                  eyebrow: "Climate change",
-                  title: "Headline about specific topic can snuggle in this little spot right here",
-                  meta: [{
-                    campus: "Indiana University",
-                    time: "April 1, 2022"
-                  }]
-                }]
-              }) }}
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Arts & Humanities</div>
+              <h2 class="rvt-card__title">
+                <a href="#">COVID-19 misinformation linked to vaccination hesitancy, refusal</a>
+              </h2>
             </div>
           </div>
-          <div class="rvt-row rvt-p-top-xxl">
-            <div class="rvt-c-twitter">
-              <div class="rvt-c-twitter__content">
-                <span class="rvt-c-twitter__eyebrow">Retweet @IUNEWSROOM</span>
-                <p><a href="#0">IUPUI students "rallied for research" and raised nearly $365,000 this past weekend at Jagathon. See more scenes See more scenes from the event&#8230;</a></p>
-                <a href="#" class="rvt-cta rvt-cta--button">Follow News at IU on Twitter</a>
-              </div>
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-business">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/briefcase.svg" -%}
+            </div>
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Business</div>
+              <h2 class="rvt-card__title">
+                <a href="#">$1 million gift supports Kelley School's Center for the Business of Life Sciences</a>
+              </h2>
             </div>
           </div>
-          <div class="rvt-row rvt-m-top-3-xl rvt-m-bottom-xxl">
-            <div class="rvt-billboard rvt-billboard--reverse rvt-c-billboard">
-              <div class="rvt-billboard__image">
-                <img src="./img/fill/swimmer.png" alt="Student in vintage-style Indiana University t-shirt">
-              </div>
-              <div class="rvt-billboard__body">
-                <h2 class="rvt-billboard__title">Feature stories</h2>
-                <div class="rvt-billboard__content [ rvt-flow ]">
-                  <p>Take a closer look inside life at IU. These in-depth features highlight the special stories, unique culture, and rich history of Indiana University.</p>
-                  <a class="rvt-cta" href="#">Explore feature stories</a>
-                </div>
-              </div>
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-campus">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/building-sign.svg" -%}
+            </div>
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Campus Life</div>
+              <h2 class="rvt-card__title">
+                <a href="#">IUPUI commencement speaker Jori Mundy to theme address around life lessons</a>
+              </h2>
             </div>
           </div>
-          <div class="rvt-row">
-            <div class="rvt-cols-12">
-              {{ Heading({ 
-                border: true,
-                eyebrow: "All campuses",
-                title: "IU stories by interest"
-              }) }}
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-health">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/apple.svg" -%}
             </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-arts">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/masks.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Arts & Humanities</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">COVID-19 misinformation linked to vaccination hesitancy, refusal</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-business">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/briefcase.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Business</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">$1 million gift supports Kelley School's Center for the Business of Life Sciences</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-campus">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/building-sign.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Campus Life</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">IUPUI commencement speaker Jori Mundy to theme address around life lessons</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-health">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/apple.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Health & wellness</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">Digital timeline tracks 'Making and Unmaking of Black Wealth' to aid racial justice conversations</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-global">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/globe.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Global</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">Former ambassador to Ukraine headlines IU's seventh America's Role in the World Conference</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-law">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/scales.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Law & Policy</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">O'Neill School tops U.S. News graduate school rankings</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-science">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/microscope.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Science & Technology</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">Holland Summer Science Programs transformational for young underrepresented students</a>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div class="rvt-cols-4-md rvt-flex">
-              <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-admin">
-                <div class="rvt-c-card--sticker__svg">
-                  {%- include "stickers/person.svg" -%}
-                </div>
-                <div class="rvt-card__body">
-                  <div class="rvt-card__eyebrow">Administration</div>
-                  <h2 class="rvt-card__title">
-                    <a href="#">2022 commencement speakers, honorary degree recipients named</a>
-                  </h2>
-                </div>
-              </div>
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Health & wellness</div>
+              <h2 class="rvt-card__title">
+                <a href="#">Digital timeline tracks 'Making and Unmaking of Black Wealth' to aid racial justice conversations</a>
+              </h2>
             </div>
           </div>
-          <div class="rvt-row rvt-row--loose rvt-m-bottom-xxl">
-            <div class="rvt-cols-md">
-              {{ Heading({ 
-              eyebrow: "Subscribe",
-              title: "Stay in touch with the things you love about IU"
-            }) }}
-            <p class="rvt-c-intro">Keep up with all the stories of how IU influences the state, nation, and world by subscribing to our news releases. There is no cost and no advertising. Subscribers’ email addresses will remain confidential with IU.</p>
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-global">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/globe.svg" -%}
             </div>
-            <div class="rvt-cols-lg">
-              <p>Form here</p>
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Global</div>
+              <h2 class="rvt-card__title">
+                <a href="#">Former ambassador to Ukraine headlines IU's seventh America's Role in the World Conference</a>
+              </h2>
             </div>
           </div>
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-law">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/scales.svg" -%}
+            </div>
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Law & Policy</div>
+              <h2 class="rvt-card__title">
+                <a href="#">O'Neill School tops U.S. News graduate school rankings</a>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-science">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/microscope.svg" -%}
+            </div>
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Science & Technology</div>
+              <h2 class="rvt-card__title">
+                <a href="#">Holland Summer Science Programs transformational for young underrepresented students</a>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-cols-4-md rvt-flex">
+          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-admin">
+            <div class="rvt-c-card--sticker__svg">
+              {%- include "stickers/person.svg" -%}
+            </div>
+            <div class="rvt-card__body">
+              <div class="rvt-card__eyebrow">Administration</div>
+              <h2 class="rvt-card__title">
+                <a href="#">2022 commencement speakers, honorary degree recipients named</a>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rvt-row rvt-row--loose rvt-m-bottom-xxl">
+        <div class="rvt-cols-md">
+          {{ Heading({ 
+          eyebrow: "Subscribe",
+          title: "Stay in touch with the things you love about IU"
+        }) }}
+        <p class="rvt-c-intro">Keep up with all the stories of how IU influences the state, nation, and world by subscribing to our news releases. There is no cost and no advertising. Subscribers’ email addresses will remain confidential with IU.</p>
+        </div>
+        <div class="rvt-cols-md">
+          <p class="rvt-p-top-xl">Form here</p>
         </div>
       </div>
     </div>
