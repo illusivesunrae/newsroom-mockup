@@ -6,6 +6,13 @@
       </div>
     {% endif %}
     <div class="rvt-card__body">
+      {% if params.icon %}
+        {% set icon = params.icon %}
+        {% set variant = "stickers/" + icon + ".svg" %}
+        <div class="rvt-c-card--horizontal__icon">
+          {% include variant %}
+        </div>
+      {% endif %}
       {% if params.eyebrow %}
         <div class="rvt-card__eyebrow">{{ params.eyebrow }}</div>
       {% endif %}

@@ -12880,9 +12880,18 @@ select.rvt-validation-success:focus {
   position: relative;
   z-index: 2;
 }
+.rvt-c-card--horizontal__icon {
+  display: flex;
+  margin-right: 1rem;
+}
+.rvt-c-card--horizontal .rvt-card__body {
+  display: flex;
+  flex-direction: row;
+}
 .rvt-c-card--horizontal .rvt-card__title {
   font-size: 1rem;
   line-height: 1.625rem;
+  padding-right: 0;
 }
 .rvt-c-card--horizontal .rvt-card__content {
   border-top: 0;
@@ -12897,6 +12906,10 @@ select.rvt-validation-success:focus {
   padding: 0 0.75rem;
   position: relative;
   width: 100%;
+}
+.rvt-c-card--horizontal .rvt-card__button-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .rvt-c-card--horizontal .rvt-card__button {
   align-items: center;
@@ -13060,8 +13073,8 @@ select.rvt-validation-success:focus {
     border-radius: 0.25rem;
   }
   .rvt-c-card--horizontal .rvt-card__body {
-    flex-basis: 66.6667%;
-    max-width: 66.6667%;
+    flex-basis: 75%;
+    max-width: 75%;
     min-width: 0;
     padding: 0 0.75rem;
     position: relative;
@@ -13074,10 +13087,10 @@ select.rvt-validation-success:focus {
   }
   .rvt-c-card--horizontal .rvt-card__button-container {
     display: flex;
-    flex-basis: 33.3333%;
+    flex-basis: 25%;
     flex-direction: column;
     margin-top: 0;
-    max-width: 33.3333%;
+    max-width: 25%;
     min-width: 0;
     padding: 0 0.75rem;
     position: relative;

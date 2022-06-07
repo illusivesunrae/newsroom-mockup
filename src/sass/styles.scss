@@ -176,9 +176,20 @@
   position: relative;
   z-index: 2;
 
+  &__icon {
+    display: flex;
+    margin-right: $spacing-sm;
+  }
+
+  .#{$prefix}-card__body {
+    display: flex;
+    flex-direction: row;
+  }
+
   .#{$prefix}-card__title {
     font-size: $ts-16;
     line-height: $ts-26;
+    padding-right: 0;
   }
 
   .#{$prefix}-card__content {
@@ -196,6 +207,11 @@
     padding: 0 .75rem;
     position: relative;
     width: 100%;
+  }
+
+  .#{$prefix}-card__button-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .#{$prefix}-card__button {
@@ -402,8 +418,8 @@
     }
 
     .#{$prefix}-card__body {
-      flex-basis: 66.6667%;
-      max-width: 66.6667%;
+      flex-basis: 75%;
+      max-width: 75%;
       min-width: 0;
       padding: 0 .75rem;
       position: relative;
@@ -418,10 +434,10 @@
 
     .#{$prefix}-card__button-container {
       display: flex;
-      flex-basis: 33.3333%;
+      flex-basis: 25%;
       flex-direction: column;
       margin-top: 0;
-      max-width: 33.3333%;
+      max-width: 25%;
       min-width: 0;
       padding: 0 .75rem;
       position: relative;
