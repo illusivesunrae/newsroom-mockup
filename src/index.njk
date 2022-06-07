@@ -33,7 +33,7 @@ description: "Learn about news from all of Indiana Universitys campuses."
             </div>
           </div>
         </div>
-        <div class="rvt-cols-lg">
+        <div class="rvt-cols-md">
           {{ Heading({ 
             border: true,
             eyebrow: "All campuses",
@@ -86,35 +86,37 @@ description: "Learn about news from all of Indiana Universitys campuses."
   <div class="rvt-flow">
     <div class="rvt-container-xl">
       <div class="rvt-row rvt-border-bottom">
-        {{ Heading({ 
-          border: true,
-          eyebrow: "All campuses",
-          title: "IU in the news",
-          url: "#0",
-          cta: "All IU in the news stories"
-        }) }}
-        {{ NewsFeed({ external: true, news: [{
-            eyebrow: "The Conversation",
-            title: "Jackie Robinson was a Republican until the GOP became the...",
-            url: "#0"
-          },
-          {
-            eyebrow: "PBS",
-            title: "How Much Do Social Media Algorithms Control You?",
-            url: "#0"
-          },
-          {
-            eyebrow: "WISH-TV",
-            title: "Loophole in Indiana red flag law comes under fire",
-            url: "#0"
-          },
-          {
-            eyebrow: "FOX59",
-            title: "Where Indiana's red flag law stands one year after FedEx shooting",
-            url: "#0"
-          }]
-        })
-        }}
+        <div class="rvt-cols-md">
+          {{ Heading({ 
+            border: true,
+            eyebrow: "All campuses",
+            title: "IU in the news",
+            url: "#0",
+            cta: "All IU in the news stories"
+          }) }}
+          {{ NewsFeed({ external: true, news: [{
+              eyebrow: "The Conversation",
+              title: "Jackie Robinson was a Republican until the GOP became the...",
+              url: "#0"
+            },
+            {
+              eyebrow: "PBS",
+              title: "How Much Do Social Media Algorithms Control You?",
+              url: "#0"
+            },
+            {
+              eyebrow: "WISH-TV",
+              title: "Loophole in Indiana red flag law comes under fire",
+              url: "#0"
+            },
+            {
+              eyebrow: "FOX59",
+              title: "Where Indiana's red flag law stands one year after FedEx shooting",
+              url: "#0"
+            }]
+          })
+          }}
+        </div>
       </div>
       <div class="rvt-row rvt-row--loose">
         <div class="rvt-cols-md">
@@ -156,13 +158,15 @@ description: "Learn about news from all of Indiana Universitys campuses."
       <div class="rvt-flow">
         <div class="rvt-container-xl">
           <div class="rvt-row rvt-border-bottom">
-            {{ Heading({ 
-              border: true,
-              eyebrow: "All campuses",
-              title: "Topical resources and stories",
-              url: "#0",
-              cta: "All news stories"
-            }) }}
+            <div class="rvt-cols">
+              {{ Heading({ 
+                border: true,
+                eyebrow: "All campuses",
+                title: "Topical resources and stories",
+                url: "#0",
+                cta: "All news stories"
+              }) }}
+            </div>
           </div>
           <div class="rvt-row rvt-row--loose rvt-p-top-xl">
             <div class="rvt-cols-lg">
@@ -243,12 +247,14 @@ description: "Learn about news from all of Indiana Universitys campuses."
               </div>
             </div>
           </div>
-          <div class="rvt-row rvt-border-bottom">
-            {{ Heading({ 
-              border: true,
-              eyebrow: "All campuses",
-              title: "IU stories by interest"
-            }) }}
+          <div class="rvt-row">
+            <div class="rvt-cols-12">
+              {{ Heading({ 
+                border: true,
+                eyebrow: "All campuses",
+                title: "IU stories by interest"
+              }) }}
+            </div>
             <div class="rvt-cols-4-md rvt-flex">
               <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-arts">
                 <div class="rvt-c-card--sticker__svg">
@@ -352,6 +358,18 @@ description: "Learn about news from all of Indiana Universitys campuses."
                   </h2>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="rvt-row rvt-row--loose rvt-m-bottom-xxl">
+            <div class="rvt-cols-md">
+              {{ Heading({ 
+              eyebrow: "Subscribe",
+              title: "Stay in touch with the things you love about IU"
+            }) }}
+            <p class="rvt-c-intro">Keep up with all the stories of how IU influences the state, nation, and world by subscribing to our news releases. There is no cost and no advertising. Subscribers’ email addresses will remain confidential with IU.</p>
+            </div>
+            <div class="rvt-cols-lg">
+              <p>Form here</p>
             </div>
           </div>
         </div>

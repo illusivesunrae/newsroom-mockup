@@ -1,10 +1,10 @@
 {% macro Heading(params) %}
   <div class="rvt-c-heading{% if params.border %} rvt-border-bottom rvt-p-bottom-sm{% endif %}">
     <span class="rvt-c-heading__eyebrow">{{ params.eyebrow }}</span>
-    <div class="rvt-flex rvt-justify-space-between">
+    <div class="rvt-c-heading__content">
       <h2 class="rvt-c-heading__title">{{ params.title }}</h2>
       {% if params.cta %}
-        <a href="{{ params.url }}" class="rvt-cta rvt-self-end">{{ params.cta }}</a>
+        <a href="{{ params.url }}" class="rvt-cta">{{ params.cta }}</a>
       {% endif %}
     </div>
   </div>

@@ -12789,7 +12789,13 @@ select.rvt-validation-success:focus {
   font-size: 1.8125rem;
   line-height: 2.5625rem;
 }
+.rvt-c-heading__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .rvt-c-heading .rvt-cta {
+  align-self: start;
   line-height: 2.5625rem;
 }
 
@@ -12840,6 +12846,9 @@ select.rvt-validation-success:focus {
 }
 .rvt-c-card--external:last-of-type {
   border: none;
+}
+.rvt-c-card--external .rvt-card__eyebrow {
+  padding-left: 0.5rem;
 }
 .rvt-c-card--external .rvt-card__title {
   padding-right: 0;
@@ -12907,19 +12916,14 @@ select.rvt-validation-success:focus {
 }
 
 .rvt-c-card--news {
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 2.5rem;
 }
 .rvt-c-card--news .rvt-card__image {
-  display: flex;
   flex-shrink: 0;
 }
 .rvt-c-card--news .rvt-card__title {
   line-height: 1.8125rem;
-}
-.rvt-c-card--news .rvt-card__body {
-  margin-left: 1.5rem;
-  padding-top: 0;
 }
 .rvt-c-card--news .rvt-card__meta {
   color: #4c5a69;
@@ -12972,11 +12976,9 @@ select.rvt-validation-success:focus {
   background-color: #edfafd;
   border-radius: 0.25rem;
   padding-bottom: 4rem;
-  padding-left: 12rem;
-  padding-right: 12rem;
-}
-.rvt-c-twitter__content {
-  margin-left: 8rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 4rem;
 }
 .rvt-c-twitter__content::before {
   content: "";
@@ -12984,8 +12986,6 @@ select.rvt-validation-success:focus {
   display: block;
   height: 4rem;
   position: relative;
-  right: 8rem;
-  top: 4rem;
   width: 4rem;
 }
 .rvt-c-twitter__eyebrow {
@@ -13012,6 +13012,15 @@ select.rvt-validation-success:focus {
   background-color: #c6ecf6;
 }
 
+@media screen and (min-width: 46.25em) {
+  .rvt-c-card--news {
+    flex-direction: row;
+  }
+  .rvt-c-card--news .rvt-card__body {
+    margin-left: 1.5rem;
+    padding-top: 0;
+  }
+}
 @media screen and (min-width: 67.5em) {
   .rvt-c-card--external {
     border-bottom: none;
@@ -13027,6 +13036,12 @@ select.rvt-validation-success:focus {
 
   .rvt-c-heading {
     padding-top: 4rem;
+  }
+  .rvt-c-heading__content {
+    flex-direction: row;
+  }
+  .rvt-c-heading .rvt-cta {
+    align-self: flex-end;
   }
 
   .rvt-hero, .rvt-c-profile {
@@ -13071,6 +13086,19 @@ select.rvt-validation-success:focus {
 
   .rvt-c-card--news:first-of-type {
     padding-top: 0;
+  }
+
+  .rvt-c-twitter {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    padding-top: 0;
+  }
+  .rvt-c-twitter__content {
+    margin-left: 8rem;
+  }
+  .rvt-c-twitter__content::before {
+    right: 8rem;
+    top: 4rem;
   }
 }
 

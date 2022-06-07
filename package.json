@@ -16,7 +16,7 @@
     "sass": "npx stylelint --fix src/sass/**/*.scss && npx sass src/sass:_site/css",
     "sass:build": "npx stylelint src/sass/**/*.scss && npx sass --style=compressed src/sass:_site/css",
     "sass:watch": "npx stylelint src/sass/**/*.scss && npx sass --watch src/sass:_site/css",
-    "start": "npm run copy:svg && npm-run-all -p eleventy:serve sass:watch"
+    "start": "npm-run-all -p eleventy:serve sass:watch"
   },
   "author": "",
   "license": "BSD-3-Clause",
