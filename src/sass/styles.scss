@@ -3,6 +3,15 @@
 @import "../../node_modules/rivet-core/sass/core/variables.scss";
 @import "../../node_modules/rivet-core/sass/rivet.scss";
 
+// Billboard customization
+.#{$prefix}-c-billboard {
+  .#{$prefix}-billboard__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 // Button in header to external site
 .#{$prefix}-c-button--external {
   border: math.div($spacing-xxs, 2) solid $color-black-100;
@@ -29,6 +38,7 @@
 // Eyebrow and title heading for certain sections
 .#{$prefix}-c-heading {
   padding-bottom: $spacing-sm;
+  padding-top: $spacing-xxl;
   width: 100%;
 
   &__eyebrow {
@@ -73,6 +83,7 @@
     @extend .#{$prefix}-hero__body;
 
     max-width: 100%;
+    padding-right: 0;
   }
 
   &__eyebrow {
@@ -106,6 +117,41 @@
   color: $color-black-400;
   font-size: $ts-18;
   line-height: $ts-29;
+}
+
+// External cards
+.#{$prefix}-c-card--external {
+  border-bottom: 1px solid $color-black-100;
+  padding-bottom: $spacing-xl !important;
+
+  &:last-of-type {
+    border: none;
+  }
+
+  .#{$prefix}-card__title {
+    padding-right: 0;
+
+    a {
+      display: flex;
+      flex-direction: row;
+
+      &::before {
+        content: none;
+      }
+
+      &:hover::before {
+        transform: none;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      svg {
+        color: $color-blue-500;
+      }
+    }
+  }
 }
 
 // Horizontal card
@@ -166,10 +212,6 @@
   flex-direction: row;
   padding-top: $spacing-xl;
 
-  &:first-of-type {
-    padding-top: 0;
-  }
-
   .#{$prefix}-card__image {
     display: flex;
     flex-shrink: 0;
@@ -199,27 +241,49 @@
   }
 }
 
-// External cards
-.#{$prefix}-c-card--external {
-  border-right: 1px solid $color-black-100;
-  margin-bottom: $spacing-lg;
-  margin-top: $spacing-lg;
-  padding-right: $spacing-xl !important;
+// Sticker card
+.#{$prefix}-c-card--sticker {
+  margin-top: $spacing-xl;
+  padding: $spacing-md;
 
-  &:last-of-type {
-    border: none;
+  &-arts {
+    background-color: $color-purple-000;
+  }
+
+  &-business {
+    background-color: $color-orange-000;
+  }
+
+  &-campus {
+    background-color: $color-crimson-000;
+  }
+
+  &-health {
+    background-color: $color-green-000;
+  }
+
+  &-global {
+    background-color: $color-blue-000;
+  }
+
+  &-law {
+    background-color: $color-black-000;
+  }
+
+  &-science {
+    background-color: $color-gold-000;
+  }
+
+  &-admin {
+    background-color: $color-crimson-000;
+  }
+
+  .#{$prefix}-card__eyebrow {
+    color: $color-black-500;
   }
 
   .#{$prefix}-card__title {
-    a {
-      &::before {
-        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjc1IDE1SDIuMjVDMS41NjEgMTUgMSAxNC40MzkgMSAxMy43NVY1LjI1QzEgNC41NjEgMS41NjEgNCAyLjI1IDRINkM2LjU1MyA0IDcgNC40NDggNyA1QzcgNS41NTIgNi41NTMgNiA2IDZIM1YxM0gxMFYxMEMxMCA5LjQ0NyAxMC40NDcgOSAxMSA5QzExLjU1MyA5IDEyIDkuNDQ3IDEyIDEwVjEzLjc1QzEyIDE0LjQzOSAxMS40MzkgMTUgMTAuNzUgMTVaIiBmaWxsPSIjMDA2Mjk4Ii8+CjxwYXRoIGQ9Ik04LjAwMDAxIDkuMDAwMDFDNy43NDQwMSA5LjAwMDAxIDcuNDg4MDEgOC45MDIwMSA3LjI5MzAxIDguNzA3MDFDNi45MDIwMSA4LjMxNjAxIDYuOTAyMDEgNy42ODQwMSA3LjI5MzAxIDcuMjkzMDFMMTMuMjkzIDEuMjkzMDFDMTMuNjg0IDAuOTAyMDA2IDE0LjMxNiAwLjkwMjAwNiAxNC43MDcgMS4yOTMwMUMxNS4wOTggMS42ODQwMSAxNS4wOTggMi4zMTYwMSAxNC43MDcgMi43MDcwMUw4LjcwNzAxIDguNzA3MDFDOC41MTIwMSA4LjkwMjAxIDguMjU2MDEgOS4wMDAwMSA4LjAwMDAxIDkuMDAwMDFaIiBmaWxsPSIjMDA2Mjk4Ii8+CjxwYXRoIGQ9Ik0xNCA4QzEzLjQ0NyA4IDEzIDcuNTUyIDEzIDdWM0g5QzguNDQ3IDMgOCAyLjU1MiA4IDJDOCAxLjQ0OCA4LjQ0NyAxIDkgMUgxMy43NUMxNC40MzkgMSAxNSAxLjU2MSAxNSAyLjI1VjdDMTUgNy41NTIgMTQuNTUzIDggMTQgOFoiIGZpbGw9IiMwMDYyOTgiLz4KPC9zdmc+Cg==');
-      }
-
-      &:hover::before {
-        transform: none;
-      }
-    }
+    line-height: math.div(1.875rem, $spacing-sm);
   }
 }
 
@@ -275,7 +339,23 @@
   }
 }
 
-@media screen and (min-width: $breakpoint-md) {
+@media screen and (min-width: $breakpoint-lg) {
+  // External cards
+  .#{$prefix}-c-card--external {
+    border-bottom: none;
+    border-right: 1px solid $color-black-100;
+    margin-bottom: $spacing-lg;
+    margin-top: $spacing-lg;
+    padding-right: $spacing-xl !important;
+
+    a {
+      &::before {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEwLjc1IDE1SDIuMjVDMS41NjEgMTUgMSAxNC40MzkgMSAxMy43NVY1LjI1QzEgNC41NjEgMS41NjEgNCAyLjI1IDRINkM2LjU1MyA0IDcgNC40NDggNyA1QzcgNS41NTIgNi41NTMgNiA2IDZIM1YxM0gxMFYxMEMxMCA5LjQ0NyAxMC40NDcgOSAxMSA5QzExLjU1MyA5IDEyIDkuNDQ3IDEyIDEwVjEzLjc1QzEyIDE0LjQzOSAxMS40MzkgMTUgMTAuNzUgMTVaIiBmaWxsPSIjMDA2Mjk4Ii8+CjxwYXRoIGQ9Ik04LjAwMDAxIDkuMDAwMDFDNy43NDQwMSA5LjAwMDAxIDcuNDg4MDEgOC45MDIwMSA3LjI5MzAxIDguNzA3MDFDNi45MDIwMSA4LjMxNjAxIDYuOTAyMDEgNy42ODQwMSA3LjI5MzAxIDcuMjkzMDFMMTMuMjkzIDEuMjkzMDFDMTMuNjg0IDAuOTAyMDA2IDE0LjMxNiAwLjkwMjAwNiAxNC43MDcgMS4yOTMwMUMxNS4wOTggMS42ODQwMSAxNS4wOTggMi4zMTYwMSAxNC43MDcgMi43MDcwMUw4LjcwNzAxIDguNzA3MDFDOC41MTIwMSA4LjkwMjAxIDguMjU2MDEgOS4wMDAwMSA4LjAwMDAxIDkuMDAwMDFaIiBmaWxsPSIjMDA2Mjk4Ii8+CjxwYXRoIGQ9Ik0xNCA4QzEzLjQ0NyA4IDEzIDcuNTUyIDEzIDdWM0g5QzguNDQ3IDMgOCAyLjU1MiA4IDJDOCAxLjQ0OCA4LjQ0NyAxIDkgMUgxMy43NUMxNC40MzkgMSAxNSAxLjU2MSAxNSAyLjI1VjdDMTUgNy41NTIgMTQuNTUzIDggMTQgOFoiIGZpbGw9IiMwMDYyOTgiLz4KPC9zdmc+Cg==');
+        right: $spacing-xxs;
+      }
+    }
+  }
+
   // Eyebrow and title heading for certain sections
   .#{$prefix}-c-heading {
     padding-top: $spacing-xxl;
@@ -326,6 +406,13 @@
       padding: 0 .75rem;
       position: relative;
       width: 100%;
+    }
+  }
+
+  // News feed
+  .#{$prefix}-c-card--news {
+    &:first-of-type {
+      padding-top: 0;
     }
   }
 }

@@ -1,11 +1,11 @@
 {% macro NewsFeed(params) %}
   {% if params.external %}
     {% for item in params.news %}
-      <div class="rvt-card rvt-c-card--news rvt-c-card--external rvt-cols">
+      <div class="rvt-card rvt-c-card--news rvt-c-card--external rvt-cols-lg">
         <div class="rvt-card__body">
           <div class="rvt-card__eyebrow">{{ item.eyebrow }}</div>
           <h3 class="rvt-card__title">
-            <a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}<span class="rvt-sr-only">(opens in new tab)</span></a>
+            <a href="{{ item.url }}" target="_blank" rel="noopener"><div class="rvt-cols-11">{{ item.title }}<span class="rvt-sr-only">(opens in new tab)</span></div><div class="rvt-col">{%- include "icons/link-external.svg" -%}</div></a>
           </h3>
         </div>
       </div>
@@ -19,7 +19,7 @@
         <div class="rvt-card__body">
           <div class="rvt-card__eyebrow">{{ item.eyebrow }}</div>
           <h3 class="rvt-card__title">
-            <a href="#">{{ item.title }}</a>
+            <a href="#">{{ item.title }}<div class="rvt-col">{%- include "icons/link-external.svg" -%}</div></a>
           </h3>
           <div class="rvt-card__meta">
             {% for meta in item.meta %}
