@@ -1,0 +1,19 @@
+{% macro Sticker(params) %}
+  {% for sticker in params.stickers %}
+    {% set icon = sticker.icon %}
+    <div class="rvt-cols-4-md rvt-flex">
+      <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-{{icon}}">
+        <div class="rvt-c-card--sticker__svg">
+          {% set variant = "stickers/" + icon + ".svg" %}
+          {% include variant %}
+        </div>
+        <div class="rvt-card__body">
+          <div class="rvt-card__eyebrow">{{ sticker.eyebrow }}</div>
+          <h3 class="rvt-card__title">
+            <a href="{{ sticker.url }}">{{ sticker.title }}</a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+{% endmacro %}

@@ -4,6 +4,7 @@ title: "IU News"
 description: "Learn about news from all of Indiana Universitys campuses."
 ---
 {%- from "components/card.njk" import Card -%}
+{%- from "components/card--sticker.njk" import Sticker -%}
 {%- from "components/heading.njk" import Heading -%}
 {%- from "components/linkHub.njk" import LinkHub -%}
 {%- from "components/newsFeed.njk" import NewsFeed -%}
@@ -253,110 +254,55 @@ description: "Learn about news from all of Indiana Universitys campuses."
             title: "IU stories by interest"
           }) }}
         </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-arts">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/masks.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Arts & Humanities</div>
-              <h3 class="rvt-card__title">
-                <a href="#">COVID-19 misinformation linked to vaccination hesitancy, refusal</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-business">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/briefcase.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Business</div>
-              <h3 class="rvt-card__title">
-                <a href="#">$1 million gift supports Kelley School's Center for the Business of Life Sciences</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-campus">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/crimson-card.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Campus Life</div>
-              <h3 class="rvt-card__title">
-                <a href="#">IUPUI commencement speaker Jori Mundy to theme address around life lessons</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-health">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/apple.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Health & wellness</div>
-              <h3 class="rvt-card__title">
-                <a href="#">Digital timeline tracks 'Making and Unmaking of Black Wealth' to aid racial justice conversations</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-global">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/globe.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Global</div>
-              <h3 class="rvt-card__title">
-                <a href="#">Former ambassador to Ukraine headlines IU's seventh America's Role in the World Conference</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-law">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/scales.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Law & Policy</div>
-              <h3 class="rvt-card__title">
-                <a href="#">O'Neill School tops U.S. News graduate school rankings</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-science">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/microscope.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Science & Technology</div>
-              <h3 class="rvt-card__title">
-                <a href="#">Holland Summer Science Programs transformational for young underrepresented students</a>
-              </h3>
-            </div>
-          </div>
-        </div>
-        <div class="rvt-cols-4-md rvt-flex">
-          <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-admin">
-            <div class="rvt-c-card--sticker__svg">
-              {%- include "stickers/person.svg" -%}
-            </div>
-            <div class="rvt-card__body">
-              <div class="rvt-card__eyebrow">Administration</div>
-              <h3 class="rvt-card__title">
-                <a href="#">2022 commencement speakers, honorary degree recipients named</a>
-              </h3>
-            </div>
-          </div>
-        </div>
+        {{ Sticker({ stickers: [{
+            icon: "arts",
+            eyebrow: "Arts & humanities",
+            title: "COVID-19 misinformation linked to vaccination hesitancy, refusal",
+            url: "#0"
+          },
+          {
+            icon: "business",
+            eyebrow: "Business",
+            title: "$1 million gift supports Kelley School's Center for the Business of Life Sciences",
+            url: "#0"
+          },
+          {
+            icon: "campus",
+            eyebrow: "Campus life",
+            title: "IUPUI commencement speaker Jori Mundy to theme address around life lessons",
+            url: "#0"
+          },
+          {
+            icon: "health",
+            eyebrow: "Health & wellness",
+            title: "Digital timeline tracks 'Making and Unmaking of Black Wealth' to aid racial justice conversations",
+            url: "#0"
+          },{
+            icon: "global",
+            eyebrow: "Global",
+            title: "Former ambassador to Ukraine headlines IU's seventh America's Role in the World Conference",
+            url: "#0"
+          },
+          {
+            icon: "law",
+            eyebrow: "Law & policy",
+            title: "O'Neill School tops U.S. News graduate school rankings",
+            url: "#0"
+          },
+          {
+            icon: "science",
+            eyebrow: "Science & technology",
+            title: "Holland Summer Science Programs transformational for young underrepresented students",
+            url: "#0"
+          },
+          {
+            icon: "admin",
+            eyebrow: "Administration",
+            title: "2022 commencement speakers, honorary degree recipients named",
+            url: "#0"
+          }]
+        })
+        }}
       </div>
       <div class="rvt-row rvt-row--loose rvt-m-bottom-xxl">
         <div class="rvt-cols-md">
