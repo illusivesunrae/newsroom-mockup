@@ -352,8 +352,16 @@
       content: none;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $color-blue-100;
+    }
+
+    &:focus {
+      box-shadow:
+        0 0 0 math.div($spacing-xxs, 2) $color-white-base,
+        0 0 0 $spacing-xxs $color-blue-400;
+      outline: none;
     }
   }
 }

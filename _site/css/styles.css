@@ -13024,8 +13024,12 @@ select.rvt-validation-success:focus {
 .rvt-c-twitter .rvt-cta--button::after {
   content: none;
 }
-.rvt-c-twitter .rvt-cta--button:hover {
+.rvt-c-twitter .rvt-cta--button:hover, .rvt-c-twitter .rvt-cta--button:focus {
   background-color: #c6ecf6;
+}
+.rvt-c-twitter .rvt-cta--button:focus {
+  box-shadow: 0 0 0 0.125rem #ffffff, 0 0 0 0.25rem #328bb8;
+  outline: none;
 }
 
 @media screen and (min-width: 46.25em) {
