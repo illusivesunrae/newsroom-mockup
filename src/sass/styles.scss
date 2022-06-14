@@ -304,7 +304,7 @@
   }
 
   .#{$prefix}-card__title {
-    line-height: math.div(1.875rem, $spacing-sm);
+    line-height: $ts-29;
   }
 }
 
