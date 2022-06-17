@@ -23,6 +23,13 @@
         </div>
       {% endif %}
     </div>
+    {% if params.meta %}
+      <div class="rvt-c-card__meta rvt-p-all-md rvt-ts-14">
+        {% for meta in params.meta %}
+          {% if meta.campus %}<span>{{ meta.campus }}&nbsp;</span>{% endif %}{% if meta.time %}<time>&nbsp;{{ meta.time }}</time>{% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
     {% if params.CTA %}
       <div class="rvt-card__button-container">
         <div class="rvt-card__button">

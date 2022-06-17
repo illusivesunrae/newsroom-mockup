@@ -1,0 +1,15 @@
+{% macro Contact(params) %}
+  <div class="rvt-card">
+    <div class="rvt-card__body">
+      <div class="rvt-card__eyebrow">{{ params.eyebrow }}</div>
+      <h3 class="rvt-card__title">
+        <a href="{{ params.url }}">{{ params.title }}</a>
+      </h3>
+      <span class="rvt-ts-16">{{ params.position }}</span>
+      <div class="rvt-card__meta">
+        {% if params.phone %}<div><span class="rvt-text-bold">P: </span><a href="tel:+1{{ params.phone }}"><span>{{ params.phone }}</span></a></div>{% endif %}
+        {% if params.email %}<div><span class="rvt-text-bold">E: </span><a href="mailto:{{ params.email }}"><span>{{ params.email }}</span></a></div>{% endif %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

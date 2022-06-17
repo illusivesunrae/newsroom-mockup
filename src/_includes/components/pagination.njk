@@ -1,0 +1,36 @@
+{% macro Pagination(params) %}
+  <nav role="navigation" aria-label="More articles" style="width: 100%;">
+    <ul class="rvt-pagination rvt-c-pagination--articles">
+      <li class="rvt-pagination__item">
+        <a href="#" aria-label="Go to previous article">
+          <div class="rvt-c-pagination--articles__item--icon">
+            {% include "icons/arrow-left.svg" %}
+          </div>
+          <div class="rvt-c-pagination--articles__item--text">
+            <div class="rvt-c-pagination--articles__item--label">
+              Previous article
+            </div>
+            <div class="rvt-c-pagination--articles__item--title">
+              Indigenous students celebrate and connect...
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="rvt-pagination__item">
+        <a href="#0" aria-label="Go to next article">
+          <div class="rvt-c-pagination--articles__item--text">
+            <div class="rvt-c-pagination--articles__item--label">
+              Next article
+            </div>
+            <div class="rvt-c-pagination--articles__item--title">
+              University community will celebrate IU Day...
+            </div>
+          </div>
+          <div class="rvt-c-pagination--articles__item--icon">
+            {% include "icons/arrow-right.svg" %}
+          </div>
+        </a>
+      </li>
+    </ul>
+  </nav>
+{% endmacro %}
