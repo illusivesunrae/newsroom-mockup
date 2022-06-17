@@ -12999,6 +12999,12 @@ select.rvt-validation-success:focus {
   line-height: 1.8125rem;
 }
 
+.rvt-c-quote {
+  border-left: 0.25rem solid #990000;
+  font-size: 0.875rem;
+  padding-left: 1.5rem;
+}
+
 .rvt-c-card--sticker {
   margin-top: 2.5rem;
   padding: 1.5rem;

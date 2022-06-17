@@ -330,6 +330,13 @@
   }
 }
 
+// Quote customizations
+.#{$prefix}-c-quote {
+  border-left: $spacing-xxs solid $color-crimson-base;
+  font-size: $ts-14;
+  padding-left: $spacing-md;
+}
+
 // Sticker card
 .#{$prefix}-c-card--sticker {
   margin-top: $spacing-xl;
