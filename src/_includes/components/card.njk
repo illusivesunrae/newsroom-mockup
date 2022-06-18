@@ -2,7 +2,7 @@
   <div class="rvt-card rvt-card--raised{% if params.horizontal %} rvt-c-card--horizontal{% endif %}">
     {% if params.img %}
       <div class="rvt-card__image">
-        <img src="{{ params.img }}" alt="{{ params.alt }}">
+        <img src="{{ params.img | url }}" alt="{{ params.alt }}">
       </div>
     {% endif %}
     <div class="rvt-card__body">

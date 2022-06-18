@@ -14,7 +14,7 @@
     {% for item in params.news %}
       <div class="rvt-card rvt-c-card--news">
         <div class="rvt-card__image">
-          <img src="{{ item.img }}" alt="{{ item.alt }}">
+          <img src="{{ item.img | url }}" alt="{{ item.alt }}">
         </div>
         <div class="rvt-card__body">
           <div class="rvt-card__eyebrow">{{ item.eyebrow }}</div>
