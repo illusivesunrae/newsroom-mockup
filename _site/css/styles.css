@@ -12819,6 +12819,19 @@ select.rvt-validation-success:focus {
   padding-right: 0;
 }
 
+.rvt-c-layout {
+  height: unset;
+}
+.rvt-c-layout .rvt-layout__wrapper--details {
+  flex-direction: column;
+}
+.rvt-c-layout .rvt-layout__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+}
+
 .rvt-c-pagination--articles {
   display: flex;
   flex-direction: column;
@@ -13176,6 +13189,13 @@ select.rvt-validation-success:focus {
     padding: 0 0.75rem;
     position: relative;
     width: 100%;
+  }
+
+  .rvt-c-layout .rvt-layout__content {
+    flex-direction: row;
+  }
+  .rvt-c-layout .rvt-layout__wrapper--details {
+    flex-direction: row;
   }
 
   .rvt-c-card--news:first-of-type {
