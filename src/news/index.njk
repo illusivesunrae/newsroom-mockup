@@ -1,0 +1,97 @@
+---
+layout: "layouts/base.njk"
+title: "IU News"
+description: "Learn about news from all of Indiana Universitys campuses."
+---
+{%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
+{%- from "components/heading.njk" import Heading -%}
+
+<main id="main-content rvt-flex rvt-layout__wrapper rvt-layout__wrapper--details">
+  <div class="rvt-flow rvt-bg-black-000">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-3-xl">
+        {{ Heading({ 
+            ts: "41",
+            padding: "none",
+            eyebrow: "News",
+            title: "Explore IU Stories",
+            headingLevel: "h1"
+          })
+        }}
+        <nav class="rvt-subnav rvt-m-top-lg" aria-label="Section navigation">
+          <ul class="rvt-subnav__list rvt-p-left-none">
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0" aria-current="page">All IU Campuses</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">Bloomington</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">IUPUI</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="rvt-flow">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Breadcrumbs({ navigation: [{
+              current: true,
+              title: "News",
+              url: "#0"
+            }]
+          })
+        }}
+        {{ Heading({ 
+            padding: "xl",
+            border: true,
+            eyebrow: "All campuses",
+            title: "Latest IU news",
+            headingLevel: "h1"
+          })
+        }}
+      </div>
+    </div>
+  </div>
+  <div class="rvt-container-xl">
+    <div class="rvt-layout__sidebar rvt-p-top-md">
+      <div class="rvt-c-articles-filter">
+        <div class="rvt-c-articles-filter__results rvt-m-bottom-sm">
+          <p class="rvt-text-uppercase rvt-color-black-300 rvt-m-top-none"><span>621</span> articles</p>
+        </div>
+        <div class="rvt-c-articles-filter__filters rvt-cols-12 rvt-is-hidden rvt-p-left-none" data-disclosure="filters">
+          <form class="rvt-m-bottom-xxl" data-articles-filters="" role="search">
+            <label class="rvt-label" for="filter-articles-topic">Topic:</label> 
+            <select class="rvt-select" data-articles-filter="topic" id="filter-articles-topic">
+              <option value="all">All topics</option>
+              <option value="arts">Arts &amp; Humanities</option>
+              <option value="business">Business and Innovation</option>
+              <option value="campus">Campus Life</option>
+              <option value="health">Health &amp; Wellness</option>
+              <option value="global">Global</option>
+              <option value="law">Law &amp; Policy</option>
+              <option value="science">Science &amp; Technology</option>
+              <option value="admin">Administration</option>
+            </select>
+            <label class="rvt-label rvt-m-top-xs" for="filter-articles-audience">News for:</label> 
+            <select class="rvt-select" data-articles-filter="audience" id="filter-articles-audience">
+              <option value="all">All IU affiliations</option>
+              <option value="students">Students</option>
+              <option value="faculty">Faculty &amp; Staff</option>
+              <option value="community">IU Community</option>
+              <option value="media">Media</option>
+            </select>
+            <label class="rvt-label rvt-m-top-xs" for="filter-articles-search">Search:</label>
+            <div class="rvt-input-group">
+              <input class="rvt-input-group__input rvt-text-input" data-articles-filter="search" id="filter-articles-search" type="text">
+            </div>
+            <button class="rvt-button rvt-button--full-width rvt-m-top-md" data-show-articles-results="" type="submit">Show results</button>
+            <button class="rvt-button rvt-button--danger-secondary rvt-button--full-width rvt-m-top-sm" data-clear-articles-filters="" style="display: none" type="button">Clear filters</button>
+        </form>
+      </div>
+      <div>
+    </div>
+  </div>
+</main>
