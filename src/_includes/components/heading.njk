@@ -1,5 +1,5 @@
 {% macro Heading(params) %}
-  <div class="rvt-c-heading{% if params.border %} rvt-border-bottom rvt-p-bottom-sm{% endif %}{% if params.padding %} rvt-p-top-{{ params.padding }}{% endif %}{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">
+  <div class="rvt-c-heading{% if params.border %} rvt-border-bottom rvt-p-bottom-sm{% endif %}{% if params.padding %} rvt-p-top-{{ params.padding }}{% endif %}">
     {% if params.eyebrow %}
       <span class="rvt-c-heading__eyebrow">{{ params.eyebrow }}</span>
     {% endif %}
@@ -8,7 +8,7 @@
       {% if params.headingLevel %}
         {% set headingLevel = params.headingLevel %}
       {% endif %}
-      <{{headingLevel}} class="rvt-c-heading__title">{{ params.title }}</{{headingLevel}}>
+      <{{headingLevel}} class="rvt-c-heading__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{{ params.title }}</{{headingLevel}}>
       {% if params.cta %}
         <a href="{{ params.url }}" class="rvt-cta">{{ params.cta }}</a>
       {% endif %}
