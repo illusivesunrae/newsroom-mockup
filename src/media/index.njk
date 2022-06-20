@@ -1,0 +1,193 @@
+---
+layout: "layouts/base.njk"
+title: "IU News"
+description: "Learn about news from all of Indiana Universitys campuses."
+---
+{%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
+{%- from "components/card.njk" import Card -%}
+{%- from "components/card--sticker.njk" import Sticker -%}
+{%- from "components/heading.njk" import Heading -%}
+{%- from "components/linkHub.njk" import LinkHub -%}
+
+<main id="main-content" class="rvt-p-bottom-3-xl">
+  <div class="rvt-flow rvt-bg-black-000">
+    <div class="rvt-container-lg">
+      <div class="rvt-row rvt-p-top-3-xl">
+        <div class="rvt-cols-12 rvt-cols-8-md">
+          <div class="rvt-hero rvt-c-hero rvt-p-top-none rvt-p-bottom-none">
+            <div class="rvt-hero__inner">
+              <div class="rvt-hero__body rvt-c-hero__body">
+                <span class="rvt-hero__eyebrow">Media</span>
+                <h1 class="rvt-hero__title">Find resouces, experts and special*</h1>
+                <div class="rvt-hero__teaser rvt-m-bottom-none">
+                  <p class="rvt-m-bottom-none">We can make the newsgathering process easier by providing access to campus buildings and parking, connecting you to the right faculty expert, approving locations for broadcast interviews, and reserving time in our media studios on campus, if necessary.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-cols-12 rvt-cols-4-md rvt-self-end rvt-p-top-md rvt-p-top-none-md-up">
+          {{ Card({
+              interactive: true,
+              title: "Get updates on campus-related emergencies",
+              url: "#0"
+            }) }}
+        </div>
+        <nav class="rvt-subnav rvt-m-top-lg" aria-label="Section navigation">
+          <ul class="rvt-subnav__list rvt-p-left-none">
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0" aria-current="page">Media</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">Faculty experts</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">Media specialists</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">Tip sheets</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="rvt-flow">
+    <div class="rvt-container-lg">
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Breadcrumbs({ navigation: [{
+              current: true,
+              title: "Media",
+              url: "#0"
+            }]
+          })
+        }}
+        {{ Card({
+          horizontal: true,
+          bg: "orange-000",
+          classes: "rvt-p-tb-xl rvt-p-lr-4-xl",
+          tucked: true,
+          ts: "29",
+          contentMargin: "none",
+          flat: true,
+          headingLevel: "h2",
+          icon: "newspaper-crimson",
+          title: "Journalists: Need experts for your COVID-19 coverage?",
+          description: "IU researchers, scientists and clinicians are available to discuss the impacts of COVID-19 on a wide range of topics.",
+          CTALink: "#0",
+          CTA: "Search our COVID-19 experts"
+        }) }}
+      </div>
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Sticker({ raised: "true", stickers: [{
+            icon: "group",
+            eyebrow: "Media specialists",
+            title: "Search our staff directory by topic area.",
+            url: "#0"
+          },
+          {
+            icon: "experts",
+            eyebrow: "Faculty experts",
+            title: "Find a faculty expert on any IU campus.",
+            url: "#0"
+          },
+          {
+            icon: "notebook",
+            eyebrow: "Tip sheets",
+            title: "Read the latest tip sheet",
+            url: "#0"
+          },
+          {
+            icon: "camera",
+            eyebrow: "Image gallery",
+            title: "Find and filter professional IU images by keyword, campus and category.",
+            url: "#0"
+          },
+          {
+            icon: "mic",
+            eyebrow: "Broadcast studies",
+            title: "Contact Chuck Carney for access to various studio spaces.",
+            url: "#0"
+          },
+          {
+            icon: "news",
+            eyebrow: "Newsletter subscriptions",
+            title: "Keep up with stories from IU by subscribing to one or all of our e-newsletters at no cost.",
+            url: "#0"
+          },
+          {
+            icon: "admin",
+            eyebrow: "Leadership resources",
+            title: "Learn about our trustees, president, vice presidents and chancellors.",
+            url: "#0"
+          }]
+        }) }}
+      </div>
+      <div class="rvt-row rvt-p-top-lg">
+        <div class="rvt-cols-12 rvt-cols-6-md">
+          {{ Heading({ 
+            title: "Visit our campus newsrooms"
+          }) }}
+          <p class="rvt-c-intro">Staff are available at all Indiana University campuses to help members of the news media find faculty experts and to provide general information about IU.</p>
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-p-top-xl">
+          {{ LinkHub({ 
+            stacked: true,
+            links: [{
+              url: "#0",
+              title: "Bloomington"
+            },
+            {
+              url: "#0",
+              title: "IUPUI"
+            },
+            {
+              url: "#0",
+              title: "IUPUC"
+            },
+            {
+              url: "#0",
+              title: "East"
+            },
+            {
+              url: "#0",
+              title: "Fort Wayne"
+            },
+            {
+              url: "#0",
+              title: "Kokomo"
+            },
+            {
+              url: "#0",
+              title: "Northwest"
+            },
+            {
+              url: "#0",
+              title: "South Bend"
+            },
+            {
+              url: "#0",
+              title: "Southeast"
+            }]
+          }) }}
+        </div>
+      </div>
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Card({
+          horizontal: true,
+          bg: "black-000",
+          classes: "rvt-p-tb-xl rvt-p-lr-3-xl",
+          wide: true,
+          tucked: true,
+          ts: "29",
+          contentMargin: "none",
+          flat: true,
+          headingLevel: "h2",
+          icon: "form-sign",
+          title: "IU media policy",
+          description: "As a state institution, Indiana University is open to all members of the media at all times. Members of the media are expected to follow campus parking rules and other regulations. Journalists are encouraged to contact the News and Media team before conducting interviews or filming footage; staff can make the newsgathering process easier by providing access to campus buildings and newsmakers and by providing parking accommodations. The media must contact our office first before entering classrooms or dormitories, unless a specific faculty member has granted a journalist permission to visit his or her classroom. Our team can also provide appropriate location agreements for broadcast interviews."
+        }) }}
+      </div>
+    </div>
+  </div>
+</main>

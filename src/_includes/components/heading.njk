@@ -12,6 +12,9 @@
       {% if params.cta %}
         <a href="{{ params.url }}" class="rvt-cta">{{ params.cta }}</a>
       {% endif %}
+      {% if params.description %}
+        <p>{{ params.description }}</p>
+      {% endif%}
     </div>
   </div>
 {% endmacro %}

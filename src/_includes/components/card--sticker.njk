@@ -1,9 +1,12 @@
 {% macro Sticker(params) %}
+  {% if params.raised %}
+    {% set style =  true %}
+  {% endif %}
   {% if params.stickers %}
     {% for sticker in params.stickers %}
       {% set icon = sticker.icon %}
       <div class="rvt-cols-4-md rvt-flex">
-        <div class="rvt-card rvt-card--clickable rvt-c-card--sticker rvt-c-card--sticker-{{icon}}">
+        <div class="rvt-card rvt-card--clickable rvt-c-card--sticker{% if style %} rvt-border-all rvt-border-radius {% else %} rvt-c-card--sticker-{{icon}}{% endif %} ">
           <div class="rvt-c-card--sticker__svg">
             {% set variant = "stickers/" + icon + ".svg" %}
             {% include variant %}

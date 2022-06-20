@@ -1,11 +1,11 @@
 {% macro Card(params) %}
-  <div class="rvt-card rvt-card--raised{% if params.horizontal %} rvt-c-card--horizontal{% endif %}">
+  <div class="rvt-card {% if not params.flat %} rvt-card--raised{% endif %}{% if params.horizontal %} rvt-c-card--horizontal{% endif %}{% if params.bg %} rvt-bg-{{ params.bg }}{% endif %}{% if params.classes %} {{ params.classes }}{% endif %}">
     {% if params.img %}
       <div class="rvt-card__image">
         <img src="{{ params.img | url }}" alt="{{ params.alt }}">
       </div>
     {% endif %}
-    <div class="rvt-card__body">
+    <div class="rvt-card__body"{% if params.wide %} style="flex-basis: 100%; max-width: 100%;"{% endif %}>
       {% if params.icon %}
         {% set icon = params.icon %}
         {% set variant = "stickers/" + icon + ".svg" %}
@@ -16,10 +16,22 @@
       {% if params.eyebrow %}
         <div class="rvt-card__eyebrow">{{ params.eyebrow }}</div>
       {% endif %}
-      <h3 class="rvt-card__title">{% if params.interactive %}<a href="{{ params.url }}">{% endif %}{{ params.title }}{% if params.interactive %}</a>{% endif %}</h3>
+      {% set headingLevel = "h2" %}
+      {% if params.headingLevel %}
+        {% set headingLevel = params.headingLevel %}
+      {% endif %}
+      {% if not params.tucked %}
+        <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{% if params.interactive %}<a href="{{ params.url }}">{% endif %}{{ params.title }}{% if params.interactive %}</a>{% endif %}</{{headingLevel}}>
+      {% endif %}
       {% if params.description %}
-        <div class="rvt-card__content [ rvt-flow ]">
+        <div class="rvt-card__content [ rvt-flow ]{% if params.contentMargin %} rvt-m-top-{{ params.contentMargin }}{% endif %}">
+          {% if params.tucked %}
+            <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{% if params.interactive %}<a href="{{ params.url }}">{% endif %}{{ params.title }}{% if params.interactive %}</a>{% endif %}</{{headingLevel}}>
+          {% endif %}
           <p>{{ params.description }}</p>
+          {% if params.CTA %}
+            <a href="{{params.CTALink}}" class="rvt-cta">{{ params.CTA }}</a>
+          {% endif %}
         </div>
       {% endif %}
     </div>
@@ -30,10 +42,10 @@
         {% endfor %}
       </div>
     {% endif %}
-    {% if params.CTA %}
+    {% if params.button %}
       <div class="rvt-card__button-container">
         <div class="rvt-card__button">
-          <a href="{{ params.CTALink }}" class="rvt-button rvt-button--crimson">{{ params.CTA }}</a>
+          <a href="{{ params.CTALink }}" class="rvt-button rvt-button--crimson">{{ params.button }}</a>
         </div>
       </div>
     {% endif %}
