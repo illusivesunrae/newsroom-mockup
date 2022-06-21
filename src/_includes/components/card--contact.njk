@@ -5,9 +5,13 @@
         <img class="rvt-avatar__image rvt-avatar--md rvt-border-radius-circle rvt-m-bottom-sm" src="{{ params.img | url }}" alt="{{ params.title }}">
       {% endif %}
       <div class="rvt-card__eyebrow">{{ params.eyebrow }}</div>
-      <h3 class="rvt-card__title">
+      {% set headingLevel = "h3" %}
+      {% if params.headingLevel %}
+        {% set headingLevel = params.headingLevel %}
+      {% endif %}
+      <{{headingLevel}} class="rvt-card__title">
         <a href="{{ params.url }}">{{ params.title }}</a>
-      </h3>
+      </{{headingLevel}}>
       <span class="rvt-ts-16">{{ params.position }}</span>
       {% if params.bullets %}
         <div class="rvt-card__content">

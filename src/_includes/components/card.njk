@@ -5,7 +5,12 @@
         <img src="{{ params.img | url }}" alt="{{ params.alt }}">
       </div>
     {% endif %}
-    <div class="rvt-card__body"{% if params.wide %} style="flex-basis: 100%; max-width: 100%;"{% endif %}>
+    {% if params.avatar %}
+      <div>
+        <img src="{{ params.avatar | url }}" alt="{{ params.alt }}" class="rvt-avatar--md rvt-border-radius-circle rvt-m-bottom-sm">
+      </div>
+    {% endif %}
+    <div class="rvt-card__body{% if params.avatar %} rvt-flex-column{% endif %}"{% if params.wide %} style="flex-basis: 100%; max-width: 100%;"{% endif %}>
       {% if params.icon %}
         {% set icon = params.icon %}
         {% set variant = "stickers/" + icon + ".svg" %}
