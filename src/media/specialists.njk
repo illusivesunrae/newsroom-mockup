@@ -1,0 +1,259 @@
+---
+layout: "layouts/base.njk"
+title: "Media specialists"
+description: "Find IU media specialists."
+---
+{%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
+{%- from "components/card.njk" import Card -%}
+{%- from "components/card--contact.njk" import Contact -%}
+{%- from "components/heading.njk" import Heading -%}
+{%- from "components/linkHub.njk" import LinkHub -%}
+{%- from "components/profile.njk" import Profile -%}
+
+<main id="main-content" class="rvt-p-bottom-3-xl">
+  <div class="rvt-flow rvt-bg-black-000">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-3-xl-md-up">
+        <div class="rvt-cols-12 rvt-cols-8-md">
+          <div class="rvt-hero rvt-c-hero rvt-p-bottom-none">
+            <div class="rvt-hero__inner">
+              <div class="rvt-hero__body rvt-c-hero__body">
+                <span class="rvt-hero__eyebrow">Media</span>
+                <h1 class="rvt-hero__title">Media specialists</h1>
+                <div class="rvt-hero__teaser">
+                  <p>Our staff can help you communicate your research, expertise, accomplishments, and events to the media and other audiences around the world.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="rvt-subnav rvt-m-top-lg" aria-label="Section navigation">
+          <ul class="rvt-subnav__list rvt-p-left-none">
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="media/">Media</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="media/experts/">Faculty experts</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="media/specialists/" aria-current="page">Media specialists</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">Tip sheets</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="rvt-flow">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Breadcrumbs({ navigation: [{
+              title: "Media",
+              url: "/media/"
+            },
+            {
+              current: true,
+              title: "Media specialists",
+              url: "/media/specialists/"
+            }]
+          })
+        }}
+        {{ Heading({ 
+            padding: "xl",
+            border: true,
+            title: "Directory",
+            headingLevel: "h2"
+          })
+        }}
+      </div>
+      <div class="rvt-row rvt-p-top-sm">
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Chuck Carney",
+            position: "Director of Media relations",
+            url: "#0",
+            meta: [{
+              phone: "3178551892",
+              email: "ccarney@iu.edu"
+            }],
+            text: "Contact Chuck for securing external media coverage for the University."
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Barbara Brosher",
+            position: "Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "8128551175",
+              email: "bbrosher@iu.edu"
+            }],
+            text: "Contact Barbara for insert simple one liner here."
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "IUPUI Brand Team",
+            title: "Amber Denney",
+            position: "Senior Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "3172787703",
+              email: "ambdenne@iu.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Kevin Fryling",
+            position: "Senior Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "812-856-2988",
+              email: "kfryling@iu.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Bloomington Brand Team",
+            title: "Kirk Johannesen",
+            position: "Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "812-855-2193",
+              email: "ktjohann@iu.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Mary Keck",
+            position: "Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "8128562148",
+              email: "marykeck@iu.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Bethany Nolan",
+            position: "Senior Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "8128556494",
+              email: "nolanb@indiana.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "IU Bloomington",
+            title: "Amanda Roach",
+            position: "Senior Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "8128563717",
+              email: "ajr1@iu.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "IU Bloomington",
+            title: "Marah Yankey",
+            position: "Senior Media Relations Consultant",
+            url: "#0",
+            meta: [{
+              phone: "8128561442",
+              email: "mqharbis@iu.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Andrea Zeek",
+            position: "Senior Communications Consultant",
+            url: "#0",
+            meta: [{
+              phone: "3172781703",
+              email: "anzeek@iu.edu"
+            }]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-6-md">
+          {{ Contact({
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Caroline Dwyer Gilley",
+            position: "Communications Consultant, Public Safety and Institutional Assurance",
+            url: "#0",
+            meta: [{
+              phone: "8128562865",
+              email: "E: cgilley@iu.edu"
+            }]
+            })
+          }}
+        </div>
+      </div>
+      <div class="rvt-row rvt-p-top-lg">
+        <div class="rvt-cols-12 rvt-cols-6-md">
+          {{ Heading({ 
+            title: "For the media"
+          }) }}
+          <p class="rvt-c-intro">Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-p-top-xl">
+          {{ LinkHub({ 
+            stacked: true,
+            links: [{
+              url: "#0",
+              title: "Media resources",
+              description: "Arrange an interview, request a photo, or find your way around campus."
+            },
+            {
+              url: "#0",
+              title: "Faculty experts",
+              description: "Find a faculty expert on any IU campus."
+            },
+            {
+              url: "#0",
+              title: "Media specialists",
+              description: "Search our staff directory by topic area."
+            }]
+          }) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
