@@ -1,0 +1,431 @@
+---
+layout: "layouts/base.njk"
+title: "Faculty experts"
+description: "Find IU faculty experts."
+---
+{%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
+{%- from "components/card.njk" import Card -%}
+{%- from "components/card--contact.njk" import Contact -%}
+{%- from "components/heading.njk" import Heading -%}
+{%- from "components/profile.njk" import Profile -%}
+
+<main id="main-content" class="rvt-layout rvt-c-layout rvt-p-bottom-3-xl">
+  <div class="rvt-flow rvt-bg-black-000">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-3-xl-md-up">
+        <div class="rvt-cols-12 rvt-cols-8-md">
+          <div class="rvt-hero rvt-c-hero rvt-p-bottom-none">
+            <div class="rvt-hero__inner">
+              <div class="rvt-hero__body rvt-c-hero__body">
+                <span class="rvt-hero__eyebrow">Media</span>
+                <h1 class="rvt-hero__title">Find IU faculty experts</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-cols-12 rvt-cols-4-md rvt-self-end rvt-p-top-md rvt-p-top-none-md-up">
+          {{ Card({
+              interactive: true,
+              title: "Are you an expert?",
+              description: "Join the growing list of IU experts. If you’re willing to speak to the media or the public about your area of expertise, please fill out this form.",
+              url: "#0"
+            }) }}
+        </div>
+        <nav class="rvt-subnav rvt-m-top-lg" aria-label="Section navigation">
+          <ul class="rvt-subnav__list rvt-p-left-none">
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="media/">Media</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="media/experts/" aria-current="page">Faculty experts</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">Media specialists</a>
+            </li>
+            <li class="rvt-subnav__item">
+              <a class="rvt-text-medium" href="#0">Tip sheets</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="rvt-flow">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Breadcrumbs({ navigation: [{
+              title: "Media",
+              url: "/media/"
+            },
+            {
+              current: true,
+              title: "Faulty experts",
+              url: "/media/experts/"
+            }]
+          })
+        }}
+      </div>
+      <div class="rvt-row rvt-p-top-sm">
+        <div class="rvt-cols-md rvt-flex rvt-p-top-md">
+          {{ Profile({
+            ts: "29",
+            flex: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Ukraine expert",
+            name: "David Bosco",
+            description: "David Bosco is associate professor of internatinal studies in the Hamilton Lugar School at IU Bloomington. He is an international law expert and is available to comment on the allegations that Russia has committed war crimes in Ukraine.",
+            url: "#0",
+            cta: "More about "
+          }) }}
+        </div>
+        <div class="rvt-cols-md rvt-flex rvt-p-top-md">
+          {{ Profile({
+            ts: "29",
+            flex: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Featured expert",
+            name: "Stephanie Andel",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus at ultricies sit pellentesque etiam vitae eget dui. Id tincidunt ac morbi praesent augue lectus fames duis egestas. Morbi eget metus velit sed feugiat eros. Ut libero tincidunt.",
+            url: "#0",
+            cta: "More about "
+          }) }}
+        </div>
+        <div class="rvt-cols-md rvt-flex rvt-p-top-md">
+          {{ Profile({
+            ts: "29",
+            flex: true,
+            sticker: "newspaper-crimson",
+            eyebrow: "Happening now:",
+            name: "Covering the crisis in Ukraine?",
+            url: "#0",
+            cta: "Search our Ukraine experts"
+          }) }}
+        </div>
+      </div>
+      <div class="rvt-row rvt-p-top-sm rvt-border-bottom">
+        <div class="rvt-cols-7">
+          {{ Heading({ 
+            title: "Find an expert"
+          }) }}
+          <p class="rvt-c-intro">Faculty and staff at Indiana University have expertise in topics across a wide range of disciplines. You can search below by expertise keyword and/or IU campus to find an IU representative whose expertise matches what you’re looking for.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rvt-layout rvt-c-layout">
+    <div class="rvt-container-xl rvt-layout__wrapper rvt-layout__wrapper--details rvt-border-bottom">
+      <div class="rvt-layout__sidebar rvt-p-top-xl rvt-border-right-none">
+        <div class="rvt-c-archive-filter">
+          <div class="rvt-c-archive-filter__results rvt-m-bottom-sm">
+            <p class="rvt-text-uppercase rvt-color-crimson rvt-m-top-none"><span>1092</span> experts</p>
+          </div>
+          <div class="rvt-c-archive__filters-toggle rvt-cols rvt-cols--last rvt-hide-lg-up">
+            <button aria-expanded="false" class="rvt-button rvt-button--plain" data-disclosure-toggle="filters" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16" width="16">
+                <path d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z" fill="currentColor"></path>
+              </svg>
+              <span class="rvt-m-left-xs">Filter</span>
+            </button>
+          </div>
+          <div class="rvt-c-archive-filter__filters rvt-cols-12 rvt-hide-sm-down rvt-p-left-none" data-disclosure="filters">
+            <form class="rvt-m-bottom-xxl" data-archive-filters="" role="search">
+              <fieldset class="rvt-border-all-none rvt-p-all-none">
+                <label class="rvt-label" for="filter-archive-campus">Campus:</label> 
+                <select class="rvt-select" data-archive-filter="campus" id="filter-archive-campus">
+                  <option value="all">All campuses</option>
+                  <option value="IUB">Bloomington</option>
+                  <option value="IUPUI">IUPUI</option>
+                  <option value="IUPUC">IUPUC</option>
+                  <option value="IUE">East</option>
+                  <option value="IUFW">Fort Wayne</option>
+                  <option value="IUK">Kokomo</option>
+                  <option value="IUN">Northwest</option>
+                  <option value="IUSB">South Bend</option>
+                  <option value="IUS">Southeast</option>
+                </select>
+                <label class="rvt-label rvt-m-top-md" for="filter-archive-category">Filter by category:</label> 
+                <ul class="rvt-list-plain rvt-width-xl">
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-1">
+                      <label for="category-1">Category lorem (23)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-2">
+                      <label for="category-2">Category lorem (32)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-3">
+                      <label for="category-3">Category lorem (8)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-4">
+                      <label for="category-4">Category lorem (296)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-5">
+                      <label for="category-5">Category lorem (2)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-6">
+                      <label for="category-6">Category lorem (621)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-7">
+                      <label for="category-7">Category lorem (19)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-category" id="category-8">
+                      <label for="category-8">Category lorem (1)</label>
+                    </div>
+                  </li>
+                </ul>
+                <label class="rvt-label rvt-m-top-md" for="filter-archive-topic">Filter by news topic:</label> 
+                <ul class="rvt-list-plain rvt-width-xl">
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-topic" id="category-1">
+                      <label for="category-1">COVID-19 (23)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-topic" id="category-2">
+                      <label for="category-2">Climate change (32)</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="rvt-checkbox">
+                      <input type="checkbox" name="filter-archive-topic" id="category-3">
+                      <label for="category-3">Ukraine (8)</label>
+                    </div>
+                  </li>
+                </ul>
+                <label class="rvt-label rvt-m-top-md" for="filter-archive-search">Search:</label>
+                <div class="rvt-input-group">
+                  <input class="rvt-input-group__input rvt-text-input" data-archive-filter="search" id="filter-archive-search" type="text">
+                </div>
+              </fieldset>
+              <button class="rvt-button rvt-button--full-width rvt-m-top-md" data-show-archive-results="" type="submit">Show results</button>
+              <button class="rvt-button rvt-button--danger-secondary rvt-button--full-width rvt-m-top-sm" data-clear-archive-filters="" style="display: none" type="button">Clear filters</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="rvt-layout__content">
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "IUPUI",
+            title: "Mathew Aalsma",
+            position: "Professor of Pediatrics",
+            url: "#0",
+            bullets: [
+              "Pediatrics",
+              "Addiction",
+              "Mental health and physical health care for children and adolescents",
+              "Juvenile justice systems"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex rvt-m-top-sm rvt-m-top-none-md-up">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Bloomington",
+            title: "Andrea Adam Moore",
+            position: "Director, Europe Gateway",
+            url: "#0",
+            bullets: [
+              "Europe",
+              "Germany",
+              "Berlin",
+              "Faculty international engagement",
+              "Institutional partnerships",
+              "IU Europe Gateway"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex rvt-m-top-sm rvt-m-top-md-md-up">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Indiana University",
+            title: "Zachary Adams",
+            position: "Assistant Professor of Psychiatry",
+            url: "#0",
+            bullets: [
+              "Pediatric traumatic stress",
+              "Evidence-based psychotherapy for child and adolescent mental health disorders",
+              "Adolescent substance use treatment",
+              "Integrated treatment of co-occurring behavioral health disorders",
+              "Technology facilitated behavioral health care"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex rvt-m-top-sm rvt-m-top-md-md-up">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Bloomington",
+            title: "Robert Affe",
+            position: "Senior Lecturer",
+            url: "#0",
+            bullets: [
+              "Media management",
+              "The movie Industry",
+              "Television programming",
+              "News and journalism",
+              "international media and legal analysis of media"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex rvt-m-top-sm rvt-m-top-md-md-up">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Bloomington",
+            title: "Asma Afsaruddin",
+            position: "Professor, Middle Eastern Languages and Cultures",
+            url: "#0",
+            bullets: [
+              "Pre-modern and modern Islamic religious and political thought",
+              "Quranic hermeneutics",
+              "Hadith criticism",
+              "Exegetical",
+              "Legal and ethical perspectives on jihad and martyrdom",
+              "Muslim attitudes toward the People of the Book",
+              "Islam and religious pluralism",
+              "Gender roles"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex rvt-m-top-sm rvt-m-top-md-md-up">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "IUPUI",
+            title: "Mangilal Agarwal",
+            position: "Professor of Mechanical and Energy Engineering",
+            url: "#0",
+            bullets: [
+              "Nanotechnology",
+              "Sensors",
+              "Flexible batteries and electronic systems",
+              "Internet of things",
+              "STEM research and education"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex rvt-m-top-sm rvt-m-top-md-md-up">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "Bloomington",
+            title: "Asma Afsaruddin",
+            position: "Professor, Middle Eastern Languages and Cultures",
+            url: "#0",
+            bullets: [
+              "Pre-modern and modern Islamic religious and political thought",
+              "Quranic hermeneutics",
+              "Hadith criticism",
+              "Exegetical",
+              "Legal and ethical perspectives on jihad and martyrdom",
+              "Muslim attitudes toward the People of the Book",
+              "Islam and religious pluralism",
+              "Gender roles"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md rvt-flex rvt-m-top-sm rvt-m-top-md-md-up">
+          {{ Contact({
+            riased: true,
+            img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg",
+            eyebrow: "IUPUI",
+            title: "Mangilal Agarwal",
+            position: "Professor of Mechanical and Energy Engineering",
+            url: "#0",
+            bullets: [
+              "Nanotechnology",
+              "Sensors",
+              "Flexible batteries and electronic systems",
+              "Internet of things",
+              "STEM research and education"
+            ]
+            })
+          }}
+        </div>
+        <div class="rvt-row rvt-justify-center rvt-m-top-lg" style="width: 100%">
+          <nav role="navigation" aria-label="More pages of articles">
+            <ul class="rvt-pagination">
+              <li class="rvt-pagination__item" aria-label="No previous pages">  
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                  <g fill="currentColor">
+                    <path d="M13,13.8a1,1,0,0,1-.77-.36L8.37,8.8a1.25,1.25,0,0,1,0-1.61l3.86-4.64a1,1,0,0,1,1.54,1.28L10.3,8l3.47,4.16A1,1,0,0,1,13,13.8ZM9.91,8.47h0Zm0-1h0Z"/>
+                    <path d="M7,13.8a1,1,0,0,1-.77-.36L2.37,8.8a1.25,1.25,0,0,1,0-1.61L6.23,2.56A1,1,0,0,1,7.77,3.84L4.3,8l3.47,4.16A1,1,0,0,1,7,13.8ZM3.91,8.47h0Zm0-1h0Z"/>
+                  </g>
+                </svg>
+              </li>
+              <li class="rvt-pagination__item" aria-label="No previous page">
+                <svg width="16" height="16" viewBox="0 0 16 16">
+                  <path fill="currentColor" d="M10.5,15a1,1,0,0,1-.77-.36L4.87,8.8a1.25,1.25,0,0,1,0-1.61L9.73,1.36a1,1,0,0,1,1.54,1.28L6.8,8l4.47,5.36A1,1,0,0,1,10.5,15ZM6.41,8.47h0Zm0-1h0Z"/>
+                </svg>
+              </li>
+              <li class="rvt-pagination__item">
+                <a href="#0" aria-label="Page 1" aria-current="page">1</a>
+              </li>
+              <li class="rvt-pagination__item">
+                <a href="#0" aria-label="Page 2">2</a>
+              </li>
+              <li class="rvt-pagination__item">
+                <a href="#0" aria-label="Page 3">3</a>
+              </li>
+              <li class="rvt-pagination__item">
+                <a href="#0" aria-label="Page 4">4</a>
+              </li>
+              <li class="rvt-pagination__item">
+                <a href="#0" aria-label="Go to next page">
+                  <svg width="16" height="16" viewBox="0 0 16 16">
+                    <path fill="currentColor" d="M5.5,15a1,1,0,0,1-.77-1.64L9.2,8,4.73,2.64A1,1,0,0,1,6.27,1.36L11.13,7.2a1.25,1.25,0,0,1,0,1.61L6.27,14.64A1,1,0,0,1,5.5,15ZM9.6,8.48h0Zm0-1h0Z"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="rvt-pagination__item">
+                <a href="#0" aria-label="Go to last page">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                    <g fill="currentColor">
+                      <path d="M3,13.8a1,1,0,0,1-.77-1.64L5.7,8,2.23,3.84A1,1,0,0,1,3.77,2.56L7.63,7.2a1.25,1.25,0,0,1,0,1.61L3.77,13.44A1,1,0,0,1,3,13.8ZM6.1,8.48h0Zm0-1h0Z"/>
+                      <path d="M9,13.8a1,1,0,0,1-.77-1.64L11.7,8,8.23,3.84A1,1,0,0,1,9.77,2.56L13.63,7.2a1.25,1.25,0,0,1,0,1.61L9.77,13.44A1,1,0,0,1,9,13.8Zm3.1-5.32h0Zm0-1h0Z"/>
+                    </g>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

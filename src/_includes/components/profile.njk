@@ -1,20 +1,33 @@
 {% macro Profile(params) %}
-  <div class="rvt-c-profile">
-    <div class="rvt-container">
-      <div class="rvt-c-profile__inner">
+  <div class="rvt-c-profile{% if params.flex %} rvt-flex{% endif %}">
+    <div class="rvt-container{% if params.flex %} rvt-flex{% endif %}">
+      <div class="rvt-c-profile__inner{% if params.flex %} rvt-flex-column rvt-items-start{% endif %}">
         <div class="rvt-c-profile__body [ rvt-flow ]">
           <div class="rvt-avatar rvt-avatar--md">
-            <img class="rvt-avatar__image" src="{{ params.img | url }}" alt="{{ params.name }}">
+            {% if not params.sticker %}
+              <img class="rvt-avatar__image" src="{{ params.img | url }}" alt="{{ params.name }}">
+            {% else %}
+              {% set icon = params.sticker %}
+              {% set variant = "stickers/" + icon + ".svg" %}
+              {% include variant %}
+            {% endif %}
           </div>
-          <span class="rvt-c-profile__eyebrow">{{ params.name }}</span>
-          <h3 class="rvt-c-profile__title">{{ params.name }}</h3>
+          <span class="rvt-c-profile__eyebrow">{{ params.eyebrow }}</span>
+          <h3 class="rvt-c-profile__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{{ params.name }}</h3>
           <div class="rvt-c-profile__teaser">
             <p>{{ params.description }}</p>
           </div>
-          <div class="rvt-c-profile__actions">
+          {% if not params.flex %}
+            <div class="rvt-c-profile__actions">
+              <a class="rvt-cta" href="#">More about {{ params.name }}</a>
+            </div>
+          {% endif %}
+        </div>
+        {% if params.flex %}
+          <div class="rvt-c-profile__actions{% if params.flex %} rvt-content-end{% endif %}">
             <a class="rvt-cta" href="#">More about {{ params.name }}</a>
           </div>
-        </div>
+        {% endif %}
       </div>
     </div>
   </div>

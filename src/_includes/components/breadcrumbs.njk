@@ -1,9 +1,9 @@
 {% macro Breadcrumbs(params) %}
   <nav role="navigation" aria-label="Breadcrumbs">
     <ol class="rvt-breadcrumbs">
-      <li><a href="#">Home</a></li>
+      <li><a href="/">Home</a></li>
       {% for item in params.navigation %}
-        <li{% if item.current %} aria-label="Current page"{% endif %}>{% if loop.index !== loop.length %}<a href="{{ item.url }}">{% endif %}{{ item.title }}{% if loop.index !== loop.length %}</a>{% endif %}</li>
+        <li{% if item.current %} aria-label="Current page"{% endif %}>{% if loop.index !== loop.length %}<a href="{{ item.url | url }}">{% endif %}{{ item.title }}{% if loop.index !== loop.length %}</a>{% endif %}</li>
       {% endfor %}
     </ol>
   </nav>
