@@ -13,9 +13,11 @@
   {% else %}
     {% for item in params.news %}
       <div class="rvt-card rvt-c-card--news">
-        <div class="rvt-card__image">
-          <img src="{{ item.img | url }}" alt="{{ item.alt }}">
-        </div>
+        {% if item.img %}
+          <div class="rvt-card__image">
+            <img src="{{ item.img | url }}" alt="{{ item.alt }}">
+          </div>
+        {% endif %}
         <div class="rvt-card__body">
           <div class="rvt-card__eyebrow">{{ item.eyebrow }}</div>
           <h3 class="rvt-card__title">
@@ -23,7 +25,7 @@
           </h3>
           <div class="rvt-c-card__meta">
             {% for meta in item.meta %}
-              {% if meta.campus %}<span>{{ meta.campus }}&nbsp;</span>{% endif %}{% if meta.time %}<time>&nbsp;{{ meta.time }}</time>{% endif %}
+              {% if meta.campus %}<span>{{ meta.campus }}{% if meta.time %}&nbsp;{% endif %}</span>{% endif %}{% if meta.time %}<time>{% if meta.campus %}&nbsp;{% endif %}{{ meta.time }}</time>{% endif %}
             {% endfor %}
           </div>
         </div>
