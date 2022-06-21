@@ -8,7 +8,7 @@
       {% if params.headingLevel %}
         {% set headingLevel = params.headingLevel %}
       {% endif %}
-      <{{headingLevel}} class="rvt-c-heading__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{{ params.title }}</{{headingLevel}}>
+      <{{headingLevel}} class="rvt-c-heading__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{{ params.title | safe }}</{{headingLevel}}>
       {% if params.cta %}
         <a href="{{ params.url }}" class="rvt-cta">{{ params.cta }}</a>
       {% endif %}
