@@ -13,8 +13,16 @@
         <a href="{{ params.url }}">{{ params.title }}</a>
       </{{headingLevel}}>
       <span class="rvt-ts-16">{{ params.position }}</span>
+      {% if params.meta %}
+        <div class="rvt-card__meta {% if params.text and params.img %} rvt-p-bottom-sm rvt-border-bottom{% elif params.text or params.img %}} rvt-p-bottom-lg rvt-border-bottom-none{% endif %}">
+          {% for meta in params.meta %}
+            {% if meta.phone %}<div><span class="rvt-text-bold">P: </span><a href="tel:+1{{ meta.phone }}"><span>{{ meta.phone }}</span></a></div>{% endif %}
+            {% if meta.email %}<div><span class="rvt-text-bold">E: </span><a href="mailto:{{ meta.email }}"><span>{{ meta.email }}</span></a></div>{% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
       {% if params.bullets or params.text %}
-        <div class="rvt-card__content rvt-border-top-none rvt-m-top-none">
+        <div class="rvt-card__content rvt-border-top-none rvt-m-top-none{% if params.meta %} rvt-p-top-none{% endif %}">
           {% if params.text %}
             <p>{{ params.text }}</p>
           {% endif %}
@@ -25,14 +33,6 @@
             {% endfor %}
           </ul>
           {% endif %}
-        </div>
-      {% endif %}
-      {% if params.meta %}
-        <div class="rvt-card__meta {% if params.text or params.img %} rvt-p-bottom-lg rvt-border-bottom{% endif %}">
-          {% for meta in params.meta %}
-            {% if meta.phone %}<div><span class="rvt-text-bold">P: </span><a href="tel:+1{{ meta.phone }}"><span>{{ meta.phone }}</span></a></div>{% endif %}
-            {% if meta.email %}<div><span class="rvt-text-bold">E: </span><a href="mailto:{{ meta.email }}"><span>{{ meta.email }}</span></a></div>{% endif %}
-          {% endfor %}
         </div>
       {% endif %}
     </div>
