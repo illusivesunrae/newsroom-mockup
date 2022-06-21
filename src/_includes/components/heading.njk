@@ -10,7 +10,7 @@
       {% endif %}
       <{{headingLevel}} class="rvt-c-heading__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{{ params.title | safe }}</{{headingLevel}}>
       {% if params.cta %}
-        <a href="{{ params.url }}" class="rvt-cta">{{ params.cta }}</a>
+        <a href="{{ params.url | url }}" class="rvt-cta">{{ params.cta }}</a>
       {% endif %}
       {% if params.description %}
         <p>{{ params.description }}</p>

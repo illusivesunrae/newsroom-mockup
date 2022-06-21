@@ -14,7 +14,7 @@
           <div class="rvt-card__body">
             <div class="rvt-card__eyebrow">{{ sticker.eyebrow }}</div>
             <h3 class="rvt-card__title">
-              <a href="{{ sticker.url }}">{{ sticker.title }}</a>
+              <a href="{{ sticker.url | url }}">{{ sticker.title }}</a>
             </h3>
           </div>
         </div>
@@ -30,7 +30,7 @@
       <div class="rvt-card__body">
         <div class="rvt-card__eyebrow">{{ params.eyebrow }}</div>
         <h3 class="rvt-card__title">
-          <a href="{{ params.url }}">{{ params.title }}</a>
+          <a href="{{ params.url | url }}">{{ params.title }}</a>
         </h3>
       </div>
     </div>

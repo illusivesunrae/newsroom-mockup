@@ -10,7 +10,7 @@
         {% set headingLevel = params.headingLevel %}
       {% endif %}
       <{{headingLevel}} class="rvt-card__title">
-        <a href="{{ params.url }}">{{ params.title }}</a>
+        <a href="{{ params.url | url }}">{{ params.title }}</a>
       </{{headingLevel}}>
       <span class="rvt-ts-16">{{ params.position }}</span>
       {% if params.meta %}

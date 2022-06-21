@@ -26,16 +26,16 @@
         {% set headingLevel = params.headingLevel %}
       {% endif %}
       {% if not params.tucked %}
-        <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{% if params.interactive %}<a href="{{ params.url }}">{% endif %}{{ params.title }}{% if params.interactive %}</a>{% endif %}</{{headingLevel}}>
+        <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{% if params.interactive %}<a href="{{ params.url | url }}">{% endif %}{{ params.title }}{% if params.interactive %}</a>{% endif %}</{{headingLevel}}>
       {% endif %}
       {% if params.description %}
         <div class="rvt-card__content [ rvt-flow ]{% if params.contentMargin %} rvt-m-top-{{ params.contentMargin }}{% endif %}">
           {% if params.tucked %}
-            <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{% if params.interactive %}<a href="{{ params.url }}">{% endif %}{{ params.title }}{% if params.interactive %}</a>{% endif %}</{{headingLevel}}>
+            <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{% if params.interactive %}<a href="{{ params.url | url }}">{% endif %}{{ params.title }}{% if params.interactive %}</a>{% endif %}</{{headingLevel}}>
           {% endif %}
           <p>{{ params.description }}</p>
           {% if params.CTA %}
-            <a href="{{params.CTALink}}" class="rvt-cta">{{ params.CTA }}</a>
+            <a href="{{ params.CTALink | url }}" class="rvt-cta">{{ params.CTA }}</a>
           {% endif %}
         </div>
       {% endif %}
@@ -50,7 +50,7 @@
     {% if params.button %}
       <div class="rvt-card__button-container">
         <div class="rvt-card__button">
-          <a href="{{ params.CTALink }}" class="rvt-button rvt-button--crimson">{{ params.button }}</a>
+          <a href="{{ params.CTALink | url }}" class="rvt-button rvt-button--crimson">{{ params.button }}</a>
         </div>
       </div>
     {% endif %}
