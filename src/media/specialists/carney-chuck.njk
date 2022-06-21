@@ -1,0 +1,93 @@
+---
+layout: "layouts/base.njk"
+title: "Media specialist | Chuck Carney"
+description: "Learn more about IU media specialist Chuck Carney"
+---
+{%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
+{%- from "components/card--contact.njk" import Contact -%}
+{%- from "components/heading.njk" import Heading -%}
+{%- from "components/linkHub.njk" import LinkHub -%}
+{%- from "components/newsFeed.njk" import NewsFeed -%}
+{%- from "components/pagination.njk" import Pagination -%}
+
+<main id="main-content" class="rvt-m-bottom-xxl">
+  <div class="rvt-flow">
+    <div class="rvt-container-sm">
+      <div class="rvt-row rvt-p-top-3-xl">
+        {{ Breadcrumbs({ navigation: [{
+              title: "Media",
+              url: "media/"
+            },
+            {
+              current: true,
+              title: "Media specialists",
+              url: "media/specialists/"
+            },
+            {
+              current: true,
+              title: "Chuck Carney",
+              url: "media/experts/carney-chuck/"
+            }]
+          })
+        }}
+        {{ Heading({ 
+            padding: "none",
+            eyebrow: "Bloomington",
+            title: "Chuck Carney",
+            headingLevel: "h1"
+          })
+        }}
+      </div>
+    </div>
+    <div class="rvt-c-share rvt-border-top rvt-border-bottom">
+      <div class="rvt-container-sm">
+        <div class="rvt-row rvt-color-black-400 rvt-ts-14 rvt-p-top-sm rvt-flex">
+          <span class="rvt-p-left-xs rvt-p-right-xs rvt-border-right"><strong>P:</strong> <a href="tel:8551892">812-855-1892</a></span><span class="rvt-p-left-xs rvt-p-right-xs rvt-border-right"><strong>E:</strong> <a href="mailto:ccarney@iu.edu">ccarney@iu.edu</a></span><span class="rvt-ts-12 rvt-badge rvt-badge--info-secondary rvt-m-left-sm rvt-m-tb-xxs rvt-m-tb-none-md-up">LinkedIn</span>
+        </div>
+      </div>
+    </div>
+    <div class="rvt-container-sm rvt-p-top-xxl">
+      <div class="rvt-row">
+        <h2 class="rvt-ts-29">About</h2>
+        <div class="rvt-p-bottom-none rvt-color-black-400 rvt-ts-18">
+          <p>Chuck assists IU communicators and campus administrators with securing external media coverage of the university. He also serves as IU's primary spokesperson.</p>
+        </div>
+      </div>
+      <div class="rvt-row rvt-m-top-xxl">
+        <h2 class="rvt-ts-29 rvt-m-bottom-xxl">Related article</h2>
+        <div class="">
+          {{ NewsFeed({ news: [{
+                img: "/img/fill/langham.png",
+                alt: "Cathy Langham",
+                eyebrow: "Administration",
+                title: "Cathy Langham appointed to IU Board of Trustees by Gov. Holcomb",
+                meta: [{
+                  campus: "Indiana University",
+                  time: "April 22, 2022"
+                }]
+              },
+              {
+                img: "/img/fill/campus--iub.png",
+                alt: "A view of Ballantine Hall on the IUB campus.",
+                eyebrow: "Administration",
+                title: "Task force on future of graduate education at IU Bloomington established",
+                meta: [{
+                  campus: "IU Bloomington",
+                  time: "April 18, 2022"
+                }]
+              },{
+                img: "/img/fill/iu-seal.png",
+                alt: "The Olympic torch.",
+                eyebrow: "Administration",
+                title: "Indiana University president appoints new Academic Tuition and Fees Task Force",
+                meta: [{
+                  campus: "IU Bloomington",
+                  time: "April 7, 2022"
+                }]
+              }]
+            })
+          }}
+      </div>
+    </div>
+  </div>
+</main>
