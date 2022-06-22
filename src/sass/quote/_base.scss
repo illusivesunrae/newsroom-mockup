@@ -1,0 +1,9 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// Quote customizations
+.#{$prefix}-c-quote {
+  border-left: $spacing-xxs solid $color-crimson-base;
+  font-size: $ts-14;
+  padding-left: $spacing-md;
+}

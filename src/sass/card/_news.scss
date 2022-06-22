@@ -1,0 +1,36 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// News feed
+.#{$prefix}-c-card--news {
+  flex-direction: column;
+  padding-top: $spacing-xl;
+
+  .#{$prefix}-card__image {
+    flex-shrink: 0;
+  }
+
+  .#{$prefix}-card__title {
+    line-height: $ts-29;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  // News feed
+  .#{$prefix}-c-card--news {
+    flex-direction: row;
+
+    .#{$prefix}-card__body {
+      margin-left: $spacing-md;
+      padding-top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-c-card--news {
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+}

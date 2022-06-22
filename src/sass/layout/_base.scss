@@ -1,0 +1,31 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// Layout
+.#{$prefix}-c-layout {
+  height: unset;
+
+  .#{$prefix}-layout__wrapper--details {
+    flex-direction: column;
+  }
+
+  .#{$prefix}-layout__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: $spacing-xl;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  // Layout
+  .#{$prefix}-c-layout {
+    .#{$prefix}-layout__content {
+      flex-direction: row;
+    }
+
+    .#{$prefix}-layout__wrapper--details {
+      flex-direction: row;
+    }
+  }
+}

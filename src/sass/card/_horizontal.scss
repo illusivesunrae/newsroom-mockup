@@ -1,0 +1,116 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// Horizontal card
+.#{$prefix}-c-card--horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: $spacing-lg;
+  overflow-x: hidden;
+  padding: $spacing-md;
+  position: relative;
+  z-index: 2;
+
+  &__icon {
+    display: flex;
+    margin-right: $spacing-sm;
+  }
+
+  .#{$prefix}-card__body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .#{$prefix}-card__title {
+    font-size: $ts-16;
+    line-height: $ts-26;
+    padding-right: 0;
+  }
+
+  .#{$prefix}-card__content {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .#{$prefix}-card__image img {
+    border-radius: $spacing-xxs;
+  }
+
+  .#{$prefix}-card__image,
+  .#{$prefix}-card__body,
+  .#{$prefix}-card__button-container {
+    padding: 0 .75rem;
+    position: relative;
+    width: 100%;
+  }
+
+  .#{$prefix}-card__button-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .#{$prefix}-card__button {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: $spacing-sm;
+
+    > a {
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .#{$prefix}-button--crimson {
+    background-color: $color-crimson-base;
+    border-color: $color-crimson-base;
+    color: $color-white-base;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  // Horizontal card
+  .#{$prefix}-c-card--horizontal {
+    .#{$prefix}-card__image {
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+      min-width: 0;
+      padding: 0 .75rem;
+      position: relative;
+      width: 100%;
+
+      img {
+        border-radius: $spacing-xxs;
+      }
+    }
+
+    .#{$prefix}-card__body {
+      flex-basis: 75%;
+      max-width: 75%;
+      min-width: 0;
+      padding: 0 .75rem;
+      position: relative;
+      width: 100%;
+    }
+
+    .#{$prefix}-card__button {
+      border-left: 1px solid $color-black-100;
+      margin-top: 0;
+      padding-left: $spacing-md;
+    }
+
+    .#{$prefix}-card__button-container {
+      display: flex;
+      flex-basis: 25%;
+      flex-direction: column;
+      margin-top: 0;
+      max-width: 25%;
+      min-width: 0;
+      padding: 0 .75rem;
+      position: relative;
+      width: 100%;
+    }
+  }
+}

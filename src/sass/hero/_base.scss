@@ -1,0 +1,19 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// Hero customizations
+.#{$prefix}-c-hero {
+  padding-bottom: 0;
+
+  .#{$prefix}-hero__body {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  // Hero customizations
+  .#{$prefix}-hero {
+    padding-bottom: $spacing-xxl;
+  }
+}

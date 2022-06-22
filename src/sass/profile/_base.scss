@@ -1,0 +1,50 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/hero-area/base" as *;
+
+.#{$prefix}-c-profile {
+  @extend .#{$prefix}-hero;
+
+  border-radius: $spacing-xs;
+  padding-bottom: $spacing-xl;
+  padding-top: $spacing-xl;
+
+  &__inner {
+    @extend .#{$prefix}-hero__inner;
+
+    margin-left: $spacing-xl;
+    margin-right: $spacing-xl;
+  }
+
+  &__body {
+    @extend .#{$prefix}-hero__body;
+
+    max-width: 100%;
+    padding-right: 0;
+  }
+
+  &__eyebrow {
+    @extend .#{$prefix}-hero__eyebrow;
+
+    color: $color-black-500;
+    margin-top: $spacing-md;
+  }
+
+  &__title {
+    @extend .#{$prefix}-hero__title;
+
+    margin-top: $spacing-xxs;
+  }
+
+  &__teaser {
+    @extend .#{$prefix}-hero__teaser;
+
+    margin-top: $spacing-sm;
+  }
+
+  &__actions {
+    @extend .#{$prefix}-hero__actions;
+
+    margin-top: $spacing-md;
+  }
+}

@@ -1,0 +1,25 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// Button in header to external site
+.#{$prefix}-c-button--external {
+  border: math.div($spacing-xxs, 2) solid $color-black-100;
+  border-radius: 999px;
+  display: flex;
+  line-height: $ts-14;
+  padding-left: $spacing-sm;
+  padding-right: $spacing-xs;
+
+  &:focus,
+  &:hover {
+    color: $color-black-base;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  svg {
+    margin-left: $spacing-xs;
+  }
+}

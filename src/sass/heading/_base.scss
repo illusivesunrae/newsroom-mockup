@@ -1,0 +1,45 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/hero-area/base" as *;
+
+// Eyebrow and title heading for certain sections
+.#{$prefix}-c-heading {
+  padding-bottom: $spacing-sm;
+  padding-top: $spacing-xxl;
+  width: 100%;
+
+  &__eyebrow {
+    @extend .#{$prefix}-hero__eyebrow;
+  }
+
+  &__title {
+    font-size: $ts-29;
+    line-height: $ts-41;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .#{$prefix}-cta {
+    align-self: start;
+    line-height: $ts-41;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  // Eyebrow and title heading for certain sections
+  .#{$prefix}-c-heading {
+    padding-top: $spacing-xxl;
+
+    &__content {
+      flex-direction: row;
+    }
+
+    .#{$prefix}-cta {
+      align-self: flex-end;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// Pagination customizations
+.#{$prefix}-c-pagination--articles {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    flex-grow: 0;
+    font-size: $ts-12;
+    padding-bottom: $spacing-sm;
+    padding-top: $spacing-lg;
+    width: 100%;
+  }
+
+  &__item {
+    &--icon {
+      margin-bottom: $spacing-xs;
+      max-width: 15%;
+      width: 15%;
+    }
+
+    &--text {
+      max-width: 70%;
+      width: 70%;
+    }
+
+    &--label {
+      color: $color-crimson-base;
+      font-size: $ts-12;
+      text-transform: uppercase;
+    }
+
+    &--title {
+      font-size: $ts-20;
+    }
+  }
+
+  .#{$prefix}-pagination__item {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+
+    &:nth-child(2) {
+      border-top: 1px solid $color-black-100 !important;
+    }
+  }
+
+  .#{$prefix}-pagination__item > * {
+    display: flex;
+  }
+
+  .#{$prefix}-pagination__item:first-of-type {
+    .#{$prefix}-c-pagination--articles__item--icon {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+  .#{$prefix}-pagination__item:nth-of-type(2) {
+    .#{$prefix}-c-pagination--articles__item--icon {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  // Pagination customizations
+  .#{$prefix}-c-pagination--articles {
+    flex-direction: row;
+
+    .#{$prefix}-pagination__item {
+      max-width: 50%;
+      width: 50%;
+
+      &:nth-child(2) {
+        border-left: 1px solid $color-black-100 !important;
+      }
+    }
+
+    .#{$prefix}-pagination__item:first-of-type a {
+      padding-left: $spacing-lg;
+      padding-right: $spacing-sm;
+    }
+
+    .#{$prefix}-pagination__item:nth-of-type(2) a {
+      padding-left: $spacing-sm;
+      padding-right: $spacing-lg;
+    }
+  }
+}
