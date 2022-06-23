@@ -317,20 +317,20 @@
   <div class="rvt-layout__wrapper rvt-layout__wrapper--details">
     <div class="rvt-layout__sidebar">
       <div class="rvt-c-archive-filter">
-        <div class="rvt-c-archive-filter__results rvt-m-bottom-sm">
-          <p class="rvt-text-uppercase rvt-color-crimson rvt-m-top-none"><span>29</span> experts</p>
+        <div class="rvt-c-archive-filter__results">
+          <p class="rvt-c-archive-filter__results-text"><span>29</span> experts</p>
         </div>
-        <div class="rvt-archive__filters-toggle rvt-cols rvt-cols--last rvt-hide-lg-up">
+        <div class="rvt-archive-filter__toggle">
           <button aria-expanded="false" class="rvt-button rvt-button--plain" data-disclosure-toggle="filters" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16" width="16">
               <path d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z" fill="currentColor"></path>
             </svg>
-            <span class="rvt-m-left-xs">Filter</span>
+            <span class="rvt-archive-filter__toggle-text">Filter</span>
           </button>
         </div>
-        <div class="rvt-c-archive-filter__filters rvt-cols-12 rvt-hide-sm-down rvt-p-left-none" data-disclosure="filters">
-          <form class="rvt-m-bottom-xxl" data-archive-filters="" role="search">
-            <fieldset class="rvt-border-all-none rvt-p-all-none">
+        <div class="rvt-c-archive-filter__filters" data-disclosure="filters">
+          <form class="rvt-c-archive-filter__form" data-archive-filters="" role="search">
+            <fieldset class="rvt-c-archive-filter__fieldset">
               <label class="rvt-label" for="filter-archive-campus">Campus:</label> 
               <select class="rvt-select" data-archive-filter="campus" id="filter-archive-campus">
                 <option value="all">All campuses</option>
@@ -344,7 +344,7 @@
                 <option value="IUSB">South Bend</option>
                 <option value="IUS">Southeast</option>
               </select>
-              <label class="rvt-label rvt-m-top-md" for="filter-archive-category">Filter by category:</label> 
+              <label class="rvt-label" for="filter-archive-category">Filter by category:</label> 
               <ul class="rvt-list-plain rvt-width-xl">
                 <li>
                   <div class="rvt-checkbox">
@@ -389,13 +389,13 @@
                   </div>
                 </li>
               </ul>
-              <label class="rvt-label rvt-m-top-md" for="filter-archive-search">Search:</label>
+              <label class="rvt-label" for="filter-archive-search">Search:</label>
               <div class="rvt-input-group">
                 <input class="rvt-input-group__input rvt-text-input" data-archive-filter="search" id="filter-archive-search" type="text">
               </div>
             </fieldset>
-            <button class="rvt-button rvt-button--full-width rvt-m-top-md" data-show-archive-results="" type="submit">Show results</button>
-            <button class="rvt-button rvt-button--danger-secondary rvt-button--full-width rvt-m-top-sm" data-clear-archive-filters="" style="display: none" type="button">Clear filters</button>
+            <button class="rvt-c-archive-filter__submit" data-show-archive-results="" type="submit">Show results</button>
+            <button class="rvt-c-archive-filter__clear" data-clear-archive-filters="" style="display: none" type="button">Clear filters</button>
           </form>
         </div>
       </div>

@@ -1,0 +1,77 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/buttons/" as *;
+@use "../../../node_modules/rivet-core/sass/grid/" as *;
+
+.#{$prefix}-c-archive-filter {
+  &__results {
+    margin-bottom: $spacing-sm;
+
+    &-text {
+      color: $color-crimson-base;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  &__toggle {
+    @extend .#{$prefix}-cols;
+
+    &-text {
+      margin-left: $spacing-xs;
+    }
+  }
+
+  &__filters {
+    display: none !important;
+    padding-left: 0;
+  }
+
+  &__form {
+    margin-bottom: $spacing-xxl;
+
+    .#{$prefix}-label:first-of-type {
+      margin-top: 0;
+    }
+
+    .#{$prefix}-label {
+      margin-top: $spacing-sm;
+    }
+  }
+
+  &__fieldset {
+    border: none;
+    padding: 0;
+  }
+
+  &__submit {
+    @extend .#{$prefix}-button;
+    @extend .#{$prefix}-button--full-width;
+
+    margin-top: $spacing-md;
+  }
+
+  &__clear {
+    @extend .#{$prefix}-button;
+    @extend .#{$prefix}-button--danger-secondary;
+    @extend .#{$prefix}-button--full-width;
+
+    margin-top: $spacing-sm;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-c-archive-filter {
+    &__filters {
+      display: block !important;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-c-archive-filter {
+    &__toggle {
+      display: none !important;
+    }
+  }
+}

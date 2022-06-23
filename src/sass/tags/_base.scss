@@ -22,6 +22,10 @@ a.#{$prefix}-c-tag {
       text-decoration: underline;
     }
 
+    &:focus {
+      border-radius: 0;
+    }
+
     span {
       line-height: $ts-12;
       margin-right: $spacing-xxs;
