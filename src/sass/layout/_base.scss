@@ -1,12 +1,24 @@
 @use 'sass:math';
 @use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/grid/" as *;
 
 // Layout
 .#{$prefix}-c-layout {
   height: unset;
 
+  .#{$prefix}-layout__wrapper {
+    @extend .#{$prefix}-container-xl;
+
+    border-bottom: 1px solid $color-black-100;
+  }
+
   .#{$prefix}-layout__wrapper--details {
     flex-direction: column;
+  }
+
+  .#{$prefix}-layout__sidebar {
+    border-right: none;
+    padding-top: $spacing-xl;
   }
 
   .#{$prefix}-layout__content {

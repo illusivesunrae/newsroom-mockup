@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/grid/" as *;
 
 // Pagination customizations
 .#{$prefix}-c-pagination--articles {
@@ -64,6 +65,14 @@
       justify-content: flex-end;
     }
   }
+}
+
+.#{$prefix}-c-pagination-group {
+  @extend .#{$prefix}-row;
+
+  justify-content: center;
+  margin-top: $spacing-lg;
+  width: 100%;
 }
 
 @media screen and (min-width: $breakpoint-md) {

@@ -8838,7 +8838,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
   padding-right: 1.5rem;
 }
 
-.rvt-container-xl {
+.rvt-container-xl, .rvt-c-layout .rvt-layout__wrapper {
   margin-left: auto;
   margin-right: auto;
   max-width: 86.25rem;
@@ -8849,7 +8849,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
 /**
  * The main row container. It's width is fluid by default.
  */
-.rvt-row, .rvt-c-tag-group {
+.rvt-row, .rvt-c-tag-group, .rvt-c-pagination-group {
   display: flex;
   flex-wrap: wrap;
   list-style: "";
@@ -8857,14 +8857,14 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
   margin-left: -0.75rem;
   padding-left: 0;
 }
-.rvt-row .rvt-cols, .rvt-c-tag-group .rvt-cols {
+.rvt-row .rvt-cols, .rvt-c-tag-group .rvt-cols, .rvt-c-pagination-group .rvt-cols {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
   padding: 0 0.75rem;
   position: relative;
 }
-.rvt-row .rvt-cols--last, .rvt-c-tag-group .rvt-cols--last {
+.rvt-row .rvt-cols--last, .rvt-c-tag-group .rvt-cols--last, .rvt-c-pagination-group .rvt-cols--last {
   margin-left: auto;
 }
 .rvt-row--loose {
@@ -8879,7 +8879,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
 .rvt-row--tight > [class^=rvt-cols] {
   padding: 0 0.5625rem;
 }
-.rvt-row [class^=rvt-cols], .rvt-c-tag-group [class^=rvt-cols] {
+.rvt-row [class^=rvt-cols], .rvt-c-tag-group [class^=rvt-cols], .rvt-c-pagination-group [class^=rvt-cols] {
   /**
    * This keeps the row from collapsing when cols inside are too
    * big for their parent .rvt-row__cols.
@@ -12480,8 +12480,15 @@ select.rvt-validation-success:focus {
 .rvt-c-layout {
   height: unset;
 }
+.rvt-c-layout .rvt-layout__wrapper {
+  border-bottom: 1px solid #e2e7e9;
+}
 .rvt-c-layout .rvt-layout__wrapper--details {
   flex-direction: column;
+}
+.rvt-c-layout .rvt-layout__sidebar {
+  border-right: none;
+  padding-top: 2.5rem;
 }
 .rvt-c-layout .rvt-layout__content {
   display: flex;
@@ -12544,6 +12551,12 @@ select.rvt-validation-success:focus {
 .rvt-c-pagination--articles .rvt-pagination__item:nth-of-type(2) .rvt-c-pagination--articles__item--icon {
   display: flex;
   justify-content: flex-end;
+}
+
+.rvt-c-pagination-group {
+  justify-content: center;
+  margin-top: 2rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 46.25em) {
