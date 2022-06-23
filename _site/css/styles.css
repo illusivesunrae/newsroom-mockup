@@ -7530,7 +7530,7 @@ strong {
     width: 10rem !important;
   }
 }
-.rvt-badge {
+.rvt-badge, a.rvt-c-tag, a.rvt-c-tag--all {
   background-color: #e2e7e9;
   border: 2px solid #e2e7e9;
   border-radius: 999px;
@@ -7557,14 +7557,14 @@ strong {
   background-color: transparent;
 }
 
-a.rvt-badge {
+a.rvt-badge, a.rvt-c-tag, a.rvt-c-tag--all {
   text-decoration: none;
 }
-a.rvt-badge:hover {
+a.rvt-badge:hover, a.rvt-c-tag:hover, a.rvt-c-tag--all:hover {
   color: #243142;
   background-color: #f8f9fa;
 }
-a.rvt-badge--info:hover, a.rvt-badge--info-secondary:hover {
+a.rvt-badge--info:hover, a.rvt-badge--info-secondary:hover, a.rvt-c-tag:hover, a.rvt-c-tag--all:hover {
   background-color: #edfafd;
   color: #004f80;
 }
@@ -7580,7 +7580,7 @@ a.rvt-badge--danger:hover, a.rvt-badge--danger-secondary:hover {
   background-color: #fff3f0;
   color: #b11c00;
 }
-a.rvt-badge:focus {
+a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
   border-radius: 999px;
 }
 
@@ -7589,7 +7589,7 @@ a.rvt-badge:focus {
   border-color: #006298;
   color: #ffffff;
 }
-.rvt-badge--info-secondary {
+.rvt-badge--info-secondary, a.rvt-c-tag, a.rvt-c-tag--all {
   background-color: transparent;
   border-color: #c6ecf6;
   color: #006298;
@@ -8849,7 +8849,7 @@ a.rvt-badge:focus {
 /**
  * The main row container. It's width is fluid by default.
  */
-.rvt-row {
+.rvt-row, .rvt-c-tag-group {
   display: flex;
   flex-wrap: wrap;
   list-style: "";
@@ -8857,14 +8857,14 @@ a.rvt-badge:focus {
   margin-left: -0.75rem;
   padding-left: 0;
 }
-.rvt-row .rvt-cols {
+.rvt-row .rvt-cols, .rvt-c-tag-group .rvt-cols {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
   padding: 0 0.75rem;
   position: relative;
 }
-.rvt-row .rvt-cols--last {
+.rvt-row .rvt-cols--last, .rvt-c-tag-group .rvt-cols--last {
   margin-left: auto;
 }
 .rvt-row--loose {
@@ -8879,7 +8879,7 @@ a.rvt-badge:focus {
 .rvt-row--tight > [class^=rvt-cols] {
   padding: 0 0.5625rem;
 }
-.rvt-row [class^=rvt-cols] {
+.rvt-row [class^=rvt-cols], .rvt-c-tag-group [class^=rvt-cols] {
   /**
    * This keeps the row from collapsing when cols inside are too
    * big for their parent .rvt-row__cols.
@@ -12599,6 +12599,39 @@ select.rvt-validation-success:focus {
   padding-left: 1.5rem;
 }
 
+a.rvt-c-tag, a.rvt-c-tag--all {
+  font-size: 0.75rem;
+  margin: 0.25rem 0 0.25rem 1rem;
+}
+a.rvt-c-tag--all {
+  border: none;
+  border-radius: 0;
+  color: #006298;
+}
+a.rvt-c-tag--all:hover {
+  background-color: transparent !important;
+  text-decoration: underline;
+}
+a.rvt-c-tag--all span {
+  line-height: 0.75rem;
+  margin-right: 0.25rem;
+}
+
+.rvt-c-tag-group {
+  align-items: center;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+.rvt-c-tag-group__title {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 46.25em) {
+  a.rvt-c-tag, a.rvt-c-tag--all {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
 .rvt-c-twitter {
   background-color: #edfafd;
   border-radius: 0.25rem;

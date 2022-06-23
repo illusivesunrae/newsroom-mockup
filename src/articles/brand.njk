@@ -176,12 +176,12 @@ description: "This is a sample brand article."
           }}
         </div>
       </div>
-      <div class="rvt-row rvt-items-center rvt-m-top-xl">
-        <h2 class="rvt-ts-14">Filed under:</h2>
-        <span class="rvt-ts-12 rvt-badge rvt-badge--info-secondary rvt-m-left-sm rvt-m-tb-xxs rvt-m-tb-none-md-up">Honors college</span>
-        <span class="rvt-ts-12 rvt-badge rvt-badge--info-secondary rvt-m-left-sm rvt-m-tb-xxs rvt-m-tb-none-md-up">School of Science</span>
-        <span class="rvt-ts-12 rvt-badge rvt-badge--info-secondary rvt-m-left-sm rvt-m-tb-xxs rvt-m-tb-none-md-up">Commencement</span>
-        <a href="#0" class="rvt-ts-12 rvt-color-blue rvt-m-left-sm rvt-m-tb-xxs rvt-m-tb-none-md-up"><span class="rvt-m-right-xxs" style="line-height: 12px;">View all tags</span>{% include "icons/plus.svg" %}</a>
+      <div class="rvt-c-tag-group">
+        <h2 class="rvt-c-tag-group__title">Filed under:</h2>
+        <a class="rvt-c-tag" href="#0">Honors college</a>
+        <a class="rvt-c-tag" href="#0">School of Science</a>
+        <a class="rvt-c-tag" href="#0">Commencement</a>
+        <a href="#0" class="rvt-c-tag--all"><span>View all tags</span>{% include "icons/plus.svg" %}</a>
       </div>
       <div class="rvt-row rvt-m-top-xl rvt-border-top rvt-border-bottom rvt-justify-center">
         {{ Pagination({}) }}

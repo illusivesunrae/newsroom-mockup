@@ -1,0 +1,49 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/badges/" as *;
+@use "../../../node_modules/rivet-core/sass/grid/" as *;
+
+a.#{$prefix}-c-tag {
+  @extend .#{$prefix}-badge;
+  @extend .#{$prefix}-badge--info-secondary;
+
+  font-size: $ts-12;
+  margin: $spacing-xxs 0 $spacing-xxs $spacing-sm;
+
+  &--all {
+    @extend .#{$prefix}-c-tag;
+
+    border: none;
+    border-radius: 0;
+    color: $color-blue-base;
+
+    &:hover {
+      background-color: transparent !important;
+      text-decoration: underline;
+    }
+
+    span {
+      line-height: $ts-12;
+      margin-right: $spacing-xxs;
+    }
+  }
+}
+
+.#{$prefix}-c-tag-group {
+  @extend .#{$prefix}-row;
+
+  align-items: center;
+  margin-bottom: $spacing-xl;
+  margin-top: $spacing-xl;
+
+  &__title {
+    font-size: $ts-14;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  a.#{$prefix}-c-tag {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
