@@ -23,7 +23,9 @@
         <div class="rvt-card__content [ rvt-flow ]{% if params.contentMargin %} rvt-m-top-{{ params.contentMargin }}{% endif %}">
           <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{{ params.title }}</{{headingLevel}}>
           <p>{{ params.description | safe }}</p>
-            <a href="{{ params.CTALink | url }}" class="rvt-cta{% if params.twitter %} rvt-cta--button{% endif %}">{{ params.CTA }}</a>
+            {% if params.CTA %}
+              <a href="{{ params.CTALink | url }}" class="rvt-cta{% if params.twitter %} rvt-cta--button{% endif %}">{{ params.CTA }}</a>
+            {% endif %}
         </div>
       {% endif %}
     </div>
