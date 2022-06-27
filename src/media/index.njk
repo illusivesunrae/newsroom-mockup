@@ -3,6 +3,7 @@ layout: "layouts/base.njk"
 title: "IU News"
 description: "Learn about news from all of Indiana Universitys campuses."
 ---
+{%- from "components/card--band.njk" import Band -%}
 {%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
 {%- from "components/card.njk" import Card -%}
 {%- from "components/card--sticker.njk" import Sticker -%}
@@ -62,14 +63,8 @@ description: "Learn about news from all of Indiana Universitys campuses."
             }]
           })
         }}
-        {{ Card({
-          horizontal: true,
-          bg: "orange-000",
-          classes: "rvt-p-tb-xl rvt-p-lr-4-xl",
-          tucked: true,
-          ts: "29",
-          contentMargin: "none",
-          flat: true,
+        {{ Band({
+          classes: "rvt-c-card--alert",
           headingLevel: "h2",
           icon: "newspaper-crimson",
           title: "Journalists: Need experts for your COVID-19 coverage?",
@@ -173,15 +168,7 @@ description: "Learn about news from all of Indiana Universitys campuses."
         </div>
       </div>
       <div class="rvt-row rvt-p-top-sm">
-        {{ Card({
-          horizontal: true,
-          bg: "black-000",
-          classes: "rvt-p-tb-xl rvt-p-lr-3-xl",
-          wide: true,
-          tucked: true,
-          ts: "29",
-          contentMargin: "none",
-          flat: true,
+        {{ Band({
           headingLevel: "h2",
           icon: "form-sign",
           title: "IU media policy",

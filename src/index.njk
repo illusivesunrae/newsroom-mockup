@@ -3,12 +3,13 @@ layout: "layouts/base.njk"
 title: "IU News"
 description: "Learn about news from all of Indiana Universitys campuses."
 ---
+{%- from "components/card--band.njk" import Band -%}
 {%- from "components/card.njk" import Card -%}
-{%- from "components/card--sticker.njk" import Sticker -%}
 {%- from "components/heading.njk" import Heading -%}
 {%- from "components/linkHub.njk" import LinkHub -%}
 {%- from "components/newsFeed.njk" import NewsFeed -%}
 {%- from "components/profile.njk" import Profile -%}
+{%- from "components/card--sticker.njk" import Sticker -%}
 
 <main id="main-content">
   <div class="rvt-flow rvt-bg-black-000">
@@ -226,13 +227,16 @@ description: "Learn about news from all of Indiana Universitys campuses."
         </div>
       </div>
       <div class="rvt-row rvt-p-top-xxl">
-        <div class="rvt-c-twitter">
-          <div class="rvt-c-twitter__content">
-            <span class="rvt-c-twitter__eyebrow">Retweet @IUNEWSROOM</span>
-            <p><a href="#0">IUPUI students "rallied for research" and raised nearly $365,000 this past weekend at Jagathon. See more scenes See more scenes from the event&#8230;</a></p>
-            <a href="#" class="rvt-cta rvt-cta--button">Follow News at IU on Twitter</a>
-          </div>
-        </div>
+        {{ Band({
+          twitter: true,
+          classes: "rvt-c-card--twitter",
+          headingLevel: "h2",
+          icon: "twitter",
+          title: "Retweet @IUNEWSROOM",
+          description: '<a href="#0">IUPUI students "rallied for research" and raised nearly $365,000 this past weekend at Jagathon. See more scenes See more scenes from the event&#8230;</a>',
+          CTALink: "#0",
+          CTA: "Search our COVID-19 experts"
+        }) }}
       </div>
       <div class="rvt-row rvt-m-top-3-xl rvt-m-bottom-xxl">
         <div class="rvt-billboard rvt-billboard--reverse rvt-c-billboard">

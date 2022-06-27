@@ -1,0 +1,102 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+.#{$prefix}-c-card--band {
+  background-color: $color-black-000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: $spacing-lg;
+  overflow-x: hidden;
+  padding: $spacing-md $spacing-sm;
+  position: relative;
+  z-index: 2;
+
+  .#{$prefix}-card__body {
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  &__icon {
+    margin-right: 0;
+  }
+
+  .#{$prefix}-card__content {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  .#{$prefix}-card__title {
+    font-size: $ts-29;
+    line-height: $spacing-lg;
+    padding-right: 0;
+  }
+}
+
+// color variants
+.#{$prefix}-c-card--twitter {
+  background-color: $color-blue-000;
+
+  .#{$prefix}-card__content p {
+    color: $color-blue-500;
+    font-size: $ts-29;
+    margin-top: 0;
+    text-decoration: underline;
+  }
+
+  .#{$prefix}-card__title {
+    font-size: $ts-14;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+  }
+
+  .#{$prefix}-cta--button {
+    background-color: transparent;
+    border-color: $color-blue-100;
+    box-shadow: none;
+    color: $color-blue-500;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-blue-100;
+    }
+
+    &:focus {
+      box-shadow:
+        0 0 0 math.div($spacing-xxs, 2) $color-white-base,
+        0 0 0 $spacing-xxs $color-blue-400;
+      outline: none;
+    }
+  }
+}
+
+.#{$prefix}-c-card--alert {
+  background-color: $color-orange-000;
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-c-card--band {
+    padding: $spacing-xl $spacing-4-xl;
+
+    .#{$prefix}-card__body {
+      align-items: inherit;
+      flex-direction: row;
+    }
+
+    &__icon {
+      flex-direction: row;
+      margin-right: $spacing-sm;
+    }
+
+    .#{$prefix}-cta--button {
+      display: inline-flex;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{% macro Band(params) %}
+  <div class="rvt-card rvt-c-card--band{% if params.classes %} {{ params.classes }}{% endif %}">
+    <div class="rvt-card__body">
+      {% if params.icon %}
+        {% set icon = params.icon %}
+        {% if params.twitter %}
+          {% set variant = "icons/" + icon + ".svg" %}
+        {% else %}
+          {% set variant = "stickers/" + icon + ".svg" %}
+        {% endif %}
+        <div class="rvt-c-card--band__icon">
+          {% include variant %}
+        </div>
+      {% endif %}
+      {% if params.eyebrow %}
+        <div class="rvt-card__eyebrow">{{ params.eyebrow }}</div>
+      {% endif %}
+      {% set headingLevel = "h2" %}
+      {% if params.headingLevel %}
+        {% set headingLevel = params.headingLevel %}
+      {% endif %}
+      {% if params.description %}
+        <div class="rvt-card__content [ rvt-flow ]{% if params.contentMargin %} rvt-m-top-{{ params.contentMargin }}{% endif %}">
+          <{{headingLevel}} class="rvt-card__title{% if params.ts %} rvt-ts-{{ params.ts }}{% endif %}">{{ params.title }}</{{headingLevel}}>
+          <p>{{ params.description | safe }}</p>
+            <a href="{{ params.CTALink | url }}" class="rvt-cta{% if params.twitter %} rvt-cta--button{% endif %}">{{ params.CTA }}</a>
+        </div>
+      {% endif %}
+    </div>
+    {% if params.button %}
+      <div class="rvt-card__button-container">
+        <div class="rvt-card__button">
+          <a href="{{ params.CTALink | url }}" class="rvt-button rvt-button--crimson">{{ params.button }}</a>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+{% endmacro %}
