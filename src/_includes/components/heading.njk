@@ -12,6 +12,11 @@
       {% if params.cta %}
         <a href="{{ params.url | url }}" class="rvt-cta">{{ params.cta }}</a>
       {% endif %}
+      {% if params.results %}
+        <div class="rvt-c-archive-filter__results">
+          <p class="rvt-c-archive-filter__results-text"><span data-programs-num-results="{{ params.total }}">{{ params.total }}</span> {{ params.type }}</p>
+        </div>
+      {% endif %}
       {% if params.description %}
         <p>{{ params.description }}</p>
       {% endif%}

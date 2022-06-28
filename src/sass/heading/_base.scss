@@ -21,6 +21,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    .#{$prefix}-c-archive-filter__results {
+      align-items: flex-end;
+      display: flex;
+      margin-bottom: $spacing-xxs;
+    }
+
+    .#{$prefix}-c-archive-filter__results-text {
+      margin-bottom: 0;
+    }
   }
 
   .#{$prefix}-cta {

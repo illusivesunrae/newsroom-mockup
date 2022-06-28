@@ -86,22 +86,27 @@ description: "Find external news articles about IU"
         </div>
       </div>
     </div>
-    <div class="rvt-layout__content">
-      {{ Heading({ 
+    <div class="rvt-layout__content" aria-live="polite">
+      <div class="rvt-cols-12">
+        {{ Heading({ 
             padding: "none",
             border: true,
             title: "All articles",
             headingLevel: "h2",
-            url: "#0",
-            cta: "621 articles"
+            results: true,
+            total: "621",
+            type: "articles"
           })
         }}
+      </div>
       <div class="rvt-cols-12">
         {{ Heading({ 
-            border: true,
+            padding: "sm",
             title: "April 2022",
-            url: "#0",
-            cta: "21 articles"
+            headingLevel: "h3",
+            results: true,
+            total: "4",
+            type: "articles"
           }) }}
       </div>
       <div class="rvt-cols-md">
@@ -148,6 +153,42 @@ description: "Find external news articles about IU"
                 title: "Professor of journalism at IUPUI",
                 img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg"
               }]
+            }]
+          })
+        }}
+      </div>
+      <div class="rvt-cols-12">
+        {{ Heading({ 
+            padding: "sm",
+            title: "March 2022",
+            headingLevel: "h3",
+            results: true,
+            total: "2",
+            type: "articles"
+          }) }}
+      </div>
+      <div class="rvt-cols-md">
+        {{ NewsFeed({ external: true, searchable: true, news: [{
+              eyebrow: "The Conversation",
+              title: "Jackie Robinson was a Republican until the GOP became the...",
+              url: "#0",
+              experts: [{
+                url: "#0",
+                name: "Chris Lamb",
+                title: "Professor of journalism at IUPUI",
+                img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg"
+              },
+              {
+                url: "#0",
+                name: "Jessica Biel",
+                title: "Professor of journalism at IUPUI",
+                img: "https://v2.rivet.iu.edu/img/placeholder/avatar-1.jpg"
+              }]
+            },
+            {
+              eyebrow: "PBS",
+              title: "How Much Do Social Media Algorithms Control You?",
+              url: "#0"
             }]
           })
         }}
