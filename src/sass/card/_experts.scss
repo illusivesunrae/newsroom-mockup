@@ -1,0 +1,30 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+.#{$prefix}-c-card--experts {
+  display: flex;
+  flex-direction: column;
+  margin-top: $spacing-sm;
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: $spacing-sm;
+
+    > * {
+      color: $color-black-400;
+      font-size: $ts-14;
+    }
+  }
+
+  .#{$prefix}-avatar {
+    margin-left: $spacing-xs;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-c-card--experts {
+    flex-direction: row;
+    padding-left: $spacing-xl;
+  }
+}

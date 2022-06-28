@@ -1,13 +1,30 @@
 {% macro NewsFeed(params) %}
   {% if params.external %}
+    {% set search = false %}
+    {% if params.searchable %}
+      {% set search = params.searchable %}
+    {% endif %}
     {% for item in params.news %}
-      <div class="rvt-card rvt-c-card--news rvt-c-card--external rvt-cols-lg">
+      <div class="rvt-card rvt-c-card--news rvt-c-card--external rvt-cols-lg{% if search %} rvt-c-card--searchable{% endif %}{% if item.experts %} rvt-flex-column{% endif %}">
         <div class="rvt-card__body">
           <div class="rvt-card__eyebrow">{{ item.eyebrow }}</div>
           <h3 class="rvt-card__title">
             <a href="{{ item.url }}" target="_blank" rel="noopener"><div class="rvt-cols-11">{{ item.title }}<span class="rvt-sr-only">(opens in new tab)</span></div><div class="rvt-col">{%- include "icons/link-external.svg" -%}</div></a>
           </h3>
         </div>
+        {% if item.experts %}
+          {% for expert in item.experts %}
+            <div class="rvt-c-card--experts">
+              <div class="rvt-avatar rvt-avatar--xs">
+                <img class="rvt-avatar__image" src="{{ expert.img }}" alt="{{ expert.name }}">
+              </div>
+              <div class="rvt-c-card--experts-details">
+                <span>IU expert</span>
+                <h4><a href="{{ expert.url }}">{{ expert.name }}</a>, {{ expert.title }}</h4>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
     {% endfor %}
   {% else %}
