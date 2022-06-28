@@ -1,0 +1,34 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+.#{$prefix}-c-photo-essay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    &--top {
+      margin-top: $spacing-md;
+      margin-bottom: $spacing-sm;
+    }
+
+    &--bottom {
+      margin-bottom: $spacing-md;
+    }
+
+    &--right {
+      margin-left: $spacing-md;
+    }
+
+    &--top img,
+    &--bottom img,
+    &--right img {
+      border-radius: $spacing-xs;
+    }
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: row;
+  }
+}

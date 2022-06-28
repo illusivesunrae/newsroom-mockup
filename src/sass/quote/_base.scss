@@ -6,4 +6,10 @@
   border-left: $spacing-xxs solid $color-crimson-base;
   font-size: $ts-14;
   padding-left: $spacing-md;
+
+  &--script {
+    font-family: $font-serif;
+    font-size: $ts-26;
+    font-style: italic;
+  }
 }

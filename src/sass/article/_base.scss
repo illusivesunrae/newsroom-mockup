@@ -1,0 +1,52 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/grid/" as *;
+
+.#{$prefix}-c-article {
+  margin-bottom: $spacing-xl;
+  padding-top: $spacing-md;
+
+  h3 {
+    font-size: $ts-23;
+  }
+
+  .#{$prefix}-c-heading {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__body {
+    @extend .#{$prefix}-row;
+
+    div:first-of-type {
+      border-bottom: 1px solid $color-black-100;
+      margin-top: 0;
+    }
+
+    > div {
+      color: $color-black-400;
+      font-size: $ts-18;
+      margin-top: $spacing-xl;
+      padding-bottom: $spacing-md;
+    }
+  }
+
+  &--brand {
+    .#{$prefix}-c-article__body {
+      div:first-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-c-article {
+    margin-bottom: $spacing-xxl;
+    padding-top: $spacing-3-xl;
+
+    .#{$prefix}-c-heading {
+      padding-top: $spacing-sm;
+    }
+  }
+}

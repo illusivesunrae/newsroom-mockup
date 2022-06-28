@@ -1,0 +1,54 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+.#{$prefix}-c-figure {
+  img {
+    border-radius: $spacing-xxs;
+  }
+
+  &--centered {
+    margin-left: auto;
+    margin-right: auto;
+
+    figcaption {
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  &--float__left {
+    float: inherit;
+  }
+
+  &--float__right {
+    float: inherit;
+  }
+
+  figcaption {
+    color: $color-black-400;
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-c-figure {
+    &--centered {
+      figcaption {
+        margin-bottom: $spacing-xl;
+      }
+    }
+
+    &--float__left {
+      float: left;
+      margin-bottom: $spacing-md;
+      margin-right: $spacing-md;
+      margin-top: $spacing-md;
+    }
+
+    &--float__right {
+      float: right;
+      margin-bottom: $spacing-md;
+      margin-left: $spacing-md;
+      margin-top: $spacing-md;
+    }
+  }
+}
