@@ -8849,7 +8849,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
 /**
  * The main row container. It's width is fluid by default.
  */
-.rvt-row, .rvt-c-tag-group, .rvt-c-pagination-group {
+.rvt-row, .rvt-c-tag-group, .rvt-c-pagination-group, .rvt-c-folio__body, .rvt-c-article__body {
   display: flex;
   flex-wrap: wrap;
   list-style: "";
@@ -8857,14 +8857,14 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
   margin-left: -0.75rem;
   padding-left: 0;
 }
-.rvt-row .rvt-cols, .rvt-c-tag-group .rvt-cols, .rvt-c-pagination-group .rvt-cols, .rvt-row .rvt-c-archive-filter__toggle, .rvt-c-tag-group .rvt-c-archive-filter__toggle, .rvt-c-pagination-group .rvt-c-archive-filter__toggle {
+.rvt-row .rvt-cols, .rvt-c-tag-group .rvt-cols, .rvt-c-pagination-group .rvt-cols, .rvt-c-folio__body .rvt-cols, .rvt-c-article__body .rvt-cols, .rvt-row .rvt-c-archive-filter__toggle, .rvt-c-tag-group .rvt-c-archive-filter__toggle, .rvt-c-pagination-group .rvt-c-archive-filter__toggle, .rvt-c-folio__body .rvt-c-archive-filter__toggle, .rvt-c-article__body .rvt-c-archive-filter__toggle {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
   padding: 0 0.75rem;
   position: relative;
 }
-.rvt-row .rvt-cols--last, .rvt-c-tag-group .rvt-cols--last, .rvt-c-pagination-group .rvt-cols--last {
+.rvt-row .rvt-cols--last, .rvt-c-tag-group .rvt-cols--last, .rvt-c-pagination-group .rvt-cols--last, .rvt-c-folio__body .rvt-cols--last, .rvt-c-article__body .rvt-cols--last {
   margin-left: auto;
 }
 .rvt-row--loose {
@@ -8879,7 +8879,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
 .rvt-row--tight > [class^=rvt-cols] {
   padding: 0 0.5625rem;
 }
-.rvt-row [class^=rvt-cols], .rvt-c-tag-group [class^=rvt-cols], .rvt-c-pagination-group [class^=rvt-cols] {
+.rvt-row [class^=rvt-cols], .rvt-c-tag-group [class^=rvt-cols], .rvt-c-pagination-group [class^=rvt-cols], .rvt-c-folio__body [class^=rvt-cols], .rvt-c-article__body [class^=rvt-cols] {
   /**
    * This keeps the row from collapsing when cols inside are too
    * big for their parent .rvt-row__cols.
@@ -12239,6 +12239,40 @@ select.rvt-validation-success:focus {
     display: none !important;
   }
 }
+.rvt-c-article {
+  margin-bottom: 2.5rem;
+  padding-top: 1.5rem;
+}
+.rvt-c-article h3 {
+  font-size: 1.4375rem;
+}
+.rvt-c-article .rvt-c-heading {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.rvt-c-article__body div:first-of-type {
+  border-bottom: 1px solid #e2e7e9;
+  margin-top: 0;
+}
+.rvt-c-article__body > div {
+  color: #4c5a69;
+  font-size: 1.125rem;
+  margin-top: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+.rvt-c-article--brand .rvt-c-article__body div:first-of-type {
+  border-bottom: none;
+}
+
+@media screen and (min-width: 67.5em) {
+  .rvt-c-article {
+    margin-bottom: 4rem;
+    padding-top: 8rem;
+  }
+  .rvt-c-article .rvt-c-heading {
+    padding-top: 1rem;
+  }
+}
 .rvt-c-billboard .rvt-billboard__body {
   display: flex;
   flex-direction: column;
@@ -12555,9 +12589,69 @@ select.rvt-validation-success:focus {
   line-height: 1.8125rem;
 }
 
+.rvt-c-folio {
+  border-bottom: 1px solid #e2e7e9;
+  border-top: 1px solid #e2e7e9;
+  margin-bottom: 2rem;
+}
+.rvt-c-folio__body {
+  color: #4c5a69;
+  display: flex;
+  font-size: 0.875rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.rvt-c-folio__release {
+  font-weight: 500;
+  padding-right: 0.5rem;
+  text-transform: uppercase;
+}
+.rvt-c-folio__detail {
+  border-left: 1px solid #e2e7e9;
+  padding-left: 0.5rem;
+}
+
+.rvt-c-figure img {
+  border-radius: 0.25rem;
+}
+.rvt-c-figure--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.rvt-c-figure--centered figcaption {
+  margin-bottom: 1rem;
+}
+.rvt-c-figure--float__left {
+  float: inherit;
+}
+.rvt-c-figure--float__right {
+  float: inherit;
+}
+.rvt-c-figure figcaption {
+  color: #4c5a69;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 46.25em) {
+  .rvt-c-figure--centered figcaption {
+    margin-bottom: 2.5rem;
+  }
+  .rvt-c-figure--float__left {
+    float: left;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .rvt-c-figure--float__right {
+    float: right;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+  }
+}
 .rvt-c-heading {
   padding-bottom: 1rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   width: 100%;
 }
 .rvt-c-heading__title {
@@ -12662,12 +12756,13 @@ select.rvt-validation-success:focus {
   font-size: 1.25rem;
 }
 .rvt-c-pagination--articles .rvt-pagination__item {
+  border-top: 1px solid #e2e7e9;
   height: auto;
   max-width: 100%;
   width: 100%;
 }
 .rvt-c-pagination--articles .rvt-pagination__item:nth-child(2) {
-  border-top: 1px solid #e2e7e9 !important;
+  border-bottom: 1px solid #e2e7e9;
 }
 .rvt-c-pagination--articles .rvt-pagination__item > * {
   display: flex;
@@ -12684,6 +12779,7 @@ select.rvt-validation-success:focus {
 .rvt-c-pagination-group {
   justify-content: center;
   margin-top: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -12692,11 +12788,12 @@ select.rvt-validation-success:focus {
     flex-direction: row;
   }
   .rvt-c-pagination--articles .rvt-pagination__item {
+    border-bottom: 1px solid #e2e7e9;
     max-width: 50%;
     width: 50%;
   }
   .rvt-c-pagination--articles .rvt-pagination__item:nth-child(2) {
-    border-left: 1px solid #e2e7e9 !important;
+    border-left: 1px solid #e2e7e9;
   }
   .rvt-c-pagination--articles .rvt-pagination__item:first-of-type a {
     padding-left: 2rem;
@@ -12707,6 +12804,29 @@ select.rvt-validation-success:focus {
     padding-right: 2rem;
   }
 }
+.rvt-c-photo-essay {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.rvt-c-photo-essay__img--top {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.rvt-c-photo-essay__img--bottom {
+  margin-bottom: 1.5rem;
+}
+.rvt-c-photo-essay__img--right {
+  margin-left: 1.5rem;
+}
+.rvt-c-photo-essay__img--top img, .rvt-c-photo-essay__img--bottom img, .rvt-c-photo-essay__img--right img {
+  border-radius: 0.5rem;
+}
+.rvt-c-photo-essay__group {
+  display: flex;
+  flex-direction: row;
+}
+
 .rvt-c-profile {
   border-radius: 0.5rem;
   padding-bottom: 2.5rem;
@@ -12738,6 +12858,11 @@ select.rvt-validation-success:focus {
   border-left: 0.25rem solid #990000;
   font-size: 0.875rem;
   padding-left: 1.5rem;
+}
+.rvt-c-quote--script {
+  font-family: "GeorgiaPro", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.625rem;
+  font-style: italic;
 }
 
 a.rvt-c-tag, a.rvt-c-tag--all {
