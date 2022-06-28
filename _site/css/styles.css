@@ -12581,6 +12581,8 @@ select.rvt-validation-success:focus {
 .rvt-c-card--searchable {
   border-bottom: 1px solid #e2e7e9 !important;
   border-right: none;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .rvt-c-card--sticker {
