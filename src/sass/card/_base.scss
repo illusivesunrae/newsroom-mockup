@@ -16,4 +16,10 @@
       display: flex;
     }
   }
+
+  .#{$prefix}-button--crimson {
+    background-color: $color-crimson-base;
+    border-color: $color-crimson-base;
+    color: $color-white-base;
+  }
 }

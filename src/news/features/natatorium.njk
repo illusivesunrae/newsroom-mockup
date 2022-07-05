@@ -1,0 +1,141 @@
+---
+layout: "layouts/base.njk"
+title: "Feature collection | IU Natatorium"
+description: "Special stories, unique culture, and the rich history of Indiana University."
+---
+{%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
+{%- from "components/card.njk" import Card -%}
+{%- from "components/heading.njk" import Heading -%}
+{%- from "components/profile.njk" import Profile -%}
+
+<main id="main-content" class="rvt-p-bottom-3-xl">
+  <div class="rvt-flow">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-3-xl-md-up">
+        <div class="rvt-cols-12 rvt-cols-8-md">
+          <div class="rvt-hero rvt-c-hero rvt-p-bottom-lg">
+            <div class="rvt-hero__inner">
+              <div class="rvt-hero__body rvt-c-hero__body">
+                <span class="rvt-hero__eyebrow">Feature collection</span>
+                <h1 class="rvt-hero__title">Pool of champions: IU Natatorium</h1>
+                <div class="rvt-hero__teaser">
+                  <p>Take a deep dive into the history, legacy and impact of the world-class aquatic facility in the heart of IUPUI's campus.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Breadcrumbs({ navigation: [
+            {
+              current: true,
+              title: "Story collection | Pool of Champions: IU Natatorium",
+              url: "/news/feature-stories/hub/"
+            }]
+          })
+        }}
+      </div>
+      <div class="rvt-row rvt-p-top-sm rvt-flow">
+        <div class="rvt-c-feature">
+          <div class="rvt-c-feature__figure">
+            <figure class="rvt-c-figure rvt-c-figure--centered">
+              <img alt="IU Bloomington Natatorium" src="/newsroom-mockup/img/fill/natatorium--lg.png" />
+            </figure>
+          </div>
+          <div class="rvt-c-feature__content">
+            <div class="rvt-c-feature__body">
+              <h3 class="rvt-c-feature__title">Taking collaboration to the next level</h3>
+              <div class="rvt-c-feature__description">
+                <p>The IU Regional Academic Health Center includes the IU Bloomington Health Sciences Building as well as IU Health Bloomington.</p>
+                <a class="rvt-cta rvt-cta--button" href="#">Explore healthfeature stories</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-cols-12">
+          <div class="rvt-quote rvt-c-quote--feature">
+            <blockquote class="rvt-quote__text">
+              <p>We always try to put on a big show, from the little kids clear up to the Olympians.</p>
+            </blockquote>
+            <p class="rvt-quote__title">Keith Dollard</p>
+            <p class="rvt-quote__subtitle">IU Natatorim Operations Manager</p>
+          </div>
+        </div>
+        <div class="rvt-c-feature rvt-c-feature--reverse rvt-m-top-xl rvt-m-top-3-xl-md-up">
+          <div class="rvt-c-feature__figure">
+            <figure class="rvt-c-figure rvt-c-figure--centered">
+              <img alt="A swimmer diving into the pool." src="/newsroom-mockup/img/fill/diver--lg.png" />
+            </figure>
+          </div>
+          <div class="rvt-c-feature__content">
+            <div class="rvt-c-feature__body">
+              <h3 class="rvt-c-feature__title">Dive behind the scenes</h3>
+              <div class="rvt-c-feature__description">
+                <p>Operations manager Keith Dollard is in charge of the Natatorium's multiple swimming pools and for events ranging from high school meets to Olympic time trials.</p>
+                <a class="rvt-cta rvt-cta--button" href="#">Take a dip</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md">
+          {{ Heading({ 
+            ts: "23",
+            title: "Jaguar swim school",
+            headingLevel: "h3"
+          }) }}
+          {{ Card({
+            interactive: true,
+            headingLevel: "h4",
+            img: "/img/fill/swimming-lessons.png",
+            alt: "A globe centered on Ukraine",
+            url: "#0",
+            title: "The Natatorium's instructional pool holds year-round classes for infants, adults and everyone in between."
+          }) }}
+        </div>
+        <div class="rvt-cols-12 rvt-cols-6-md">
+          {{ Heading({ 
+            ts: "23",
+            title: "Home-pool advantage",
+            headingLevel: "h3"
+          }) }}
+          {{ Card({
+            interactive: true,
+            headingLevel: "h4",
+            img: "/img/fill/swimmer-prep.png",
+            alt: "A globe centered on Ukraine",
+            url: "#0",
+            title: "The Natatorium hosts international contests and the IUPUI swimming and diving team."
+          }) }}
+        </div>
+        <div class="rvt-cols-12">
+          <div class="rvt-quote rvt-c-quote--feature">
+            <blockquote class="rvt-quote__text">
+              <p>I was in that age group when Michael Phelps was just crushing it. We'll be watching swim meets and hear a commentator's name, and it will be someone on the wall. It's just really cool to see that every day.</p>
+            </blockquote>
+            <p class="rvt-quote__title">Zack Andrews</p>
+            <p class="rvt-quote__subtitle">Junior swimmer</p>
+          </div>
+        </div>
+        <div class="rvt-cols-12 rvt-m-top-xl rvt-m-top-3-xl-md-up">
+          <div class="rvt-billboard rvt-billboard--reverse rvt-c-billboard rvt-m-top-none rvt-m-top-xxl-md-up">
+            <div class="rvt-billboard__image">
+              <img src="{{ '/img/fill/swimmer-diving--lg.png' | url }}" alt="Student in vintage-style Indiana University t-shirt">
+            </div>
+            <div class="rvt-billboard__body">
+              <h3 class="rvt-billboard__title">Calendar packed with the state's best and the world's elite</h3>
+              <div class="rvt-billboard__content [ rvt-flow ]">
+                <p>Through 2025, the Natatorium has bookings for annual fixtures as well as major events that come through every few years.</p>
+                <a class="rvt-cta rvt-cta--button" href="#">Check the schedule</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

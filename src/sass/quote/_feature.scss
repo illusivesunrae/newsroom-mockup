@@ -1,0 +1,41 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+
+// Quote customizations
+.#{$prefix}-c-quote--feature {
+  align-items: flex-start;
+  font-family: $font-serif;
+  font-size: $ts-41;
+  margin-top: $spacing-md;
+  text-align: left;
+
+  &::before {
+    background-image: unset;
+    content: '\201C';
+    font-size: 85px;
+    margin-left: 0;
+  }
+
+  .#{$prefix}-quote__citation {
+    display: block;
+    text-align: left;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .#{$prefix}-quote__title,
+  .#{$prefix}-quote__subtitle {
+    font-size: $ts-18;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-c-quote--feature {
+    margin-top: $spacing-4-xl;
+    max-width: 60%;
+    padding-left: $spacing-xxl;
+  }
+}

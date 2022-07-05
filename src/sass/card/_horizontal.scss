@@ -62,12 +62,6 @@
       width: 100%;
     }
   }
-
-  .#{$prefix}-button--crimson {
-    background-color: $color-crimson-base;
-    border-color: $color-crimson-base;
-    color: $color-white-base;
-  }
 }
 
 @media screen and (min-width: $breakpoint-lg) {

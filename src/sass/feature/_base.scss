@@ -1,0 +1,65 @@
+@use 'sass:math';
+@use "../../../node_modules/rivet-core/sass/core/variables.scss" as *;
+@use "../../../node_modules/rivet-core/sass/billboard/" as *;
+
+.#{$prefix}-c-feature {
+  &__body {
+    @extend .#{$prefix}-billboard__body;
+  }
+
+  &__title {
+    @extend .#{$prefix}-billboard__body;
+  }
+
+  &__description {
+    @extend .#{$prefix}-billboard__content;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-c-feature {
+    display: flex;
+
+    &__figure {
+      min-width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__content {
+      align-items: center;
+      display: inline-flex;
+      margin-left: -25rem;
+      width: 100%;
+    }
+
+    &__body {
+      background-color: $color-white-base;
+      border-bottom-left-radius: $spacing-xxs;
+      border-top-left-radius: $spacing-xxs;
+      padding: $spacing-xl;
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
+
+      .#{$prefix}-c-feature__body {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: $spacing-xxs;
+        border-top-left-radius: 0;
+        border-top-right-radius: $spacing-xxs;
+      }
+
+      .#{$prefix}-c-feature__content {
+        margin-left: 0;
+        margin-right: -25rem;
+      }
+    }
+  }
+}

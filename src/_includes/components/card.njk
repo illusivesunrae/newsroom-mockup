@@ -1,5 +1,5 @@
 {% macro Card(params) %}
-  <div class="rvt-card {% if not params.flat %} rvt-card--raised{% endif %}{% if params.horizontal %} rvt-c-card--horizontal{% endif %}{% if params.bg %} rvt-bg-{{ params.bg }}{% endif %}{% if params.classes %} {{ params.classes }}{% endif %}">
+  <div class="rvt-card rvt-c-card{% if not params.flat %} rvt-card--raised{% endif %}{% if params.horizontal %} rvt-c-card--horizontal{% endif %}{% if params.bg %} rvt-bg-{{ params.bg }}{% endif %}{% if params.classes %} {{ params.classes }}{% endif %}">
     {% if params.img %}
       <div class="rvt-card__image">
         <img src="{{ params.img | url }}" alt="{{ params.alt }}">
