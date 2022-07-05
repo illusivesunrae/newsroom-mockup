@@ -46,12 +46,22 @@ description: "Find external news articles about IU"
             }]
           })
         }}
+        {{ Heading({ 
+            padding: "xl",
+            border: true,
+            title: "All articles",
+            headingLevel: "h2"
+          })
+        }}
       </div>
     </div>
   </div>
   <div class="rvt-layout__wrapper rvt-layout__wrapper--details">
     <div class="rvt-layout__sidebar">
       <div class="rvt-c-archive-filter">
+        <div class="rvt-c-archive-filter__results" aria-live="polite">
+          <p class="rvt-c-archive-filter__results-text"><span data-programs-num-results="621">621</span> tip sheets</p>
+        </div>
         <div class="rvt-c-archive-filter__toggle">
           <button aria-expanded="false" class="rvt-button rvt-button--plain" data-disclosure-toggle="filters" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 16 16" width="16">
@@ -87,19 +97,7 @@ description: "Find external news articles about IU"
       </div>
     </div>
     <div class="rvt-layout__content" aria-live="polite">
-      <div class="rvt-cols-12">
-        {{ Heading({ 
-            padding: "none",
-            border: true,
-            title: "All articles",
-            headingLevel: "h2",
-            results: true,
-            total: "621",
-            type: "articles"
-          })
-        }}
-      </div>
-      <div class="rvt-cols-12 rvt-m-bottom-sm">
+      <div class="rvt-cols-12 rvt-m-bottom-none rvt-m-bottom-sm-md-up">
         {{ Heading({ 
             padding: "sm",
             ts: "23",
