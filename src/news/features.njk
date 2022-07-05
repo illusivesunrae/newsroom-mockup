@@ -1,0 +1,89 @@
+---
+layout: "layouts/base.njk"
+title: "Feature stories"
+description: "Special stories, unique culture, and the rich history of Indiana University."
+---
+{%- from "components/breadcrumbs.njk" import Breadcrumbs -%}
+{%- from "components/card.njk" import Card -%}
+{%- from "components/card--contact.njk" import Contact -%}
+{%- from "components/heading.njk" import Heading -%}
+{%- from "components/linkHub.njk" import LinkHub -%}
+{%- from "components/profile.njk" import Profile -%}
+
+<main id="main-content" class="rvt-p-bottom-3-xl">
+  <div class="rvt-flow rvt-bg-black-000">
+    <div class="rvt-container-xl">
+      <div class="rvt-row rvt-p-top-3-xl-md-up">
+        <div class="rvt-cols-12 rvt-cols-8-md">
+          <div class="rvt-hero rvt-c-hero rvt-p-bottom-lg">
+            <div class="rvt-hero__inner">
+              <div class="rvt-hero__body rvt-c-hero__body">
+                <span class="rvt-hero__eyebrow">Feature stories</span>
+                <h1 class="rvt-hero__title">Special stories, unique culture, and the rich history of Indiana University.</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="rvt-container-lg">
+      <div class="rvt-row rvt-p-top-sm">
+        {{ Breadcrumbs({ navigation: [
+            {
+              current: true,
+              title: "Feature stories",
+              url: "/news/feature-stories/"
+            }]
+          })
+        }}
+        {{ Heading({ 
+            padding: "xl",
+            title: "Story collections",
+            headingLevel: "h2"
+          })
+        }}
+        <p>A curation of stories that fall under an IU specific category or topic.</p>
+      </div>
+      <div class="rvt-row rvt-p-top-sm rvt-flow">
+        <div class="rvt-billboard rvt-billboard--reverse rvt-c-billboard rvt-m-top-none rvt-m-top-xxl-md-up">
+          <div class="rvt-billboard__image">
+            <img src="{{ '/img/fill/assembly-hall.png' | url }}" alt="Student in vintage-style Indiana University t-shirt">
+          </div>
+          <div class="rvt-billboard__body">
+            <h3 class="rvt-billboard__title">50 years at Simon Skjodt Assembly Hall</h3>
+            <div class="rvt-billboard__content [ rvt-flow ]">
+              <p>Celebrating the 50th anniversary by examining some of the unique factors that make it one of college basketball’s most iconic venues.</p>
+              <a class="rvt-cta rvt-cta--button" href="#">Explore venue stories</a>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-billboard rvt-c-billboard rvt-m-top-xxl rvt-m-top-4-xl-md-up">
+          <div class="rvt-billboard__image">
+            <img src="{{ '/img/fill/iu-health.png' | url }}" alt="Student in vintage-style Indiana University t-shirt">
+          </div>
+          <div class="rvt-billboard__body">
+            <h3 class="rvt-billboard__title">Taking collaboration to the next level</h3>
+            <div class="rvt-billboard__content [ rvt-flow ]">
+              <p>The IU Regional Academic Health Center includes the IU Bloomington Health Sciences Building as well as IU Health Bloomington.</p>
+              <a class="rvt-cta rvt-cta--button" href="#">Explore healthfeature stories</a>
+            </div>
+          </div>
+        </div>
+        <div class="rvt-billboard rvt-billboard--reverse rvt-c-billboard rvt-m-top-xxl rvt-m-top-4-xl-md-up">
+          <div class="rvt-billboard__image">
+            <img src="{{ '/img/fill/olympics.png' | url }}" alt="Student in vintage-style Indiana University t-shirt">
+          </div>
+          <div class="rvt-billboard__body">
+            <h3 class="rvt-billboard__title">Hoosiers making an Olympic splash</h3>
+            <div class="rvt-billboard__content [ rvt-flow ]">
+              <p>Take a deep dive into the stories behind the Indiana University athletes going for gold in the 2020 Tokyo Olympics.</p>
+              <a class="rvt-cta rvt-cta--button" href="#">Explore Olympic stories</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
