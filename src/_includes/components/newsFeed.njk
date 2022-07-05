@@ -40,11 +40,17 @@
           <h3 class="rvt-card__title">
             <a href="#">{{ item.title }}</a>
           </h3>
-          <div class="rvt-c-card__meta">
-            {% for meta in item.meta %}
-              {% if meta.campus %}<span>{{ meta.campus }}{% if meta.time %}&nbsp;{% endif %}</span>{% endif %}{% if meta.time %}<time>{% if meta.campus %}&nbsp;{% endif %}{{ meta.time }}</time>{% endif %}
-            {% endfor %}
-          </div>
+          {% if item.meta %}
+            <div class="rvt-c-card__meta">
+              {% for meta in item.meta %}
+                {% if meta.campus %}<span>{{ meta.campus }}{% if meta.time %}&nbsp;{% endif %}</span>{% endif %}{% if meta.time %}<time>{% if meta.campus %}&nbsp;{% endif %}{{ meta.time }}</time>{% endif %}
+              {% endfor %}
+            </div>
+          {% elif item.campus %}
+            <span>{{ item.campus }}</span>
+          {% elif item.time %}
+            <time>{{ item.time }}</time>
+          {% endif %}
         </div>
       </div>
     {% endfor %}
