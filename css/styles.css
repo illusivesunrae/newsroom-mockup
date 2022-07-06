@@ -7649,10 +7649,10 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
 .rvt-billboard__title--plain::before {
   content: none;
 }
-.rvt-billboard__body {
+.rvt-billboard__body, .rvt-c-feature__body, .rvt-c-feature__title {
   margin-top: 2.5rem;
 }
-.rvt-billboard__content {
+.rvt-billboard__content, .rvt-c-feature__description {
   color: #4c5a69;
   margin-top: 1rem;
   --flow-space: 1.5rem;
@@ -7665,7 +7665,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
   display: block;
   border-radius: 0.5rem;
 }
-.rvt-billboard--center .rvt-billboard__body {
+.rvt-billboard--center .rvt-billboard__body, .rvt-billboard--center .rvt-c-feature__body, .rvt-billboard--center .rvt-c-feature__title {
   text-align: center;
   max-width: 48rem;
   margin-top: 0;
@@ -7701,7 +7701,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
     margin-right: calc(50% - 50vw);
     z-index: -1;
   }
-  .rvt-billboard__body {
+  .rvt-billboard__body, .rvt-c-feature__body, .rvt-c-feature__title {
     flex-basis: 33%;
     flex-grow: 1;
     padding-right: 2.5rem;
@@ -7716,7 +7716,7 @@ a.rvt-badge:focus, a.rvt-c-tag:focus, a.rvt-c-tag--all:focus {
     top: -4rem;
     margin-left: calc(50% - 50vw);
   }
-  .rvt-billboard--reverse .rvt-billboard__body {
+  .rvt-billboard--reverse .rvt-billboard__body, .rvt-billboard--reverse .rvt-c-feature__body, .rvt-billboard--reverse .rvt-c-feature__title {
     padding-right: 0;
     padding-left: 2.5rem;
   }
@@ -12390,6 +12390,11 @@ select.rvt-validation-success:focus {
   content: "•";
   display: flex;
 }
+.rvt-c-card .rvt-button--crimson {
+  background-color: #990000;
+  border-color: #990000;
+  color: #ffffff;
+}
 
 .rvt-c-card--experts {
   display: flex;
@@ -12509,11 +12514,6 @@ select.rvt-validation-success:focus {
 .rvt-c-card--horizontal .rvt-card__button > a {
   justify-content: center;
   width: 100%;
-}
-.rvt-c-card--horizontal .rvt-button--crimson {
-  background-color: #990000;
-  border-color: #990000;
-  color: #ffffff;
 }
 
 @media screen and (min-width: 67.5em) {
@@ -12642,6 +12642,45 @@ select.rvt-validation-success:focus {
   padding-left: 0.5rem;
 }
 
+@media screen and (min-width: 46.25em) {
+  .rvt-c-feature {
+    display: flex;
+  }
+  .rvt-c-feature__figure {
+    min-width: 100%;
+  }
+  .rvt-c-feature__figure img {
+    width: 100%;
+  }
+  .rvt-c-feature__content {
+    align-items: center;
+    display: inline-flex;
+    margin-left: -25rem;
+    width: 100%;
+  }
+  .rvt-c-feature__body {
+    background-color: #ffffff;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    padding: 2.5rem;
+  }
+  .rvt-c-feature__title {
+    margin-top: 0;
+  }
+  .rvt-c-feature--reverse {
+    flex-direction: row-reverse;
+  }
+  .rvt-c-feature--reverse .rvt-c-feature__body {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0.25rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0.25rem;
+  }
+  .rvt-c-feature--reverse .rvt-c-feature__content {
+    margin-left: 0;
+    margin-right: -25rem;
+  }
+}
 .rvt-c-figure img {
   border-radius: 0.25rem;
 }
@@ -12719,6 +12758,7 @@ select.rvt-validation-success:focus {
   }
 }
 .rvt-c-hero {
+  background-color: transparent;
   padding-bottom: 0;
 }
 .rvt-c-hero .rvt-hero__body {
@@ -12904,6 +12944,39 @@ select.rvt-validation-success:focus {
   font-style: italic;
 }
 
+.rvt-c-quote--feature {
+  align-items: flex-start;
+  font-family: "GeorgiaPro", Georgia, "Times New Roman", Times, serif;
+  font-size: 2.5625rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+.rvt-c-quote--feature::before {
+  background-image: unset;
+  content: "“";
+  font-size: 85px;
+  margin-left: 0;
+}
+.rvt-c-quote--feature .rvt-quote__citation {
+  display: block;
+  text-align: left;
+}
+.rvt-c-quote--feature .rvt-quote__citation::before {
+  display: none;
+}
+.rvt-c-quote--feature .rvt-quote__title,
+.rvt-c-quote--feature .rvt-quote__subtitle {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+@media screen and (min-width: 46.25em) {
+  .rvt-c-quote--feature {
+    margin-top: 12rem;
+    max-width: 60%;
+    padding-left: 4rem;
+  }
+}
 a.rvt-c-tag, a.rvt-c-tag--all {
   font-size: 0.75rem;
   margin: 0.25rem 0 0.25rem 1rem;
